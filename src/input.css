@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@font-face{
+    font-family: "Peinaud";
+    src: url("./fonts/PeinaudMedium.ttf") format("truetype");
+}
