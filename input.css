@@ -1,6 +1,19 @@
 @import "tailwindcss";
 
-@font-face{
-    font-family: "Peinaud";
-    src: url("./fonts/PeinaudMedium.ttf") format("truetype");
+@font-face {
+  font-family: "Peinaud";
+  src: url("./fonts/PeinaudMedium.ttf") format("truetype");
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-2: #0d0e11;
+  --color-primary-1: #ffffff;
+}
+
+.inter {
+  font-family: "Inter", serif;
+  font-weight: 400;
+  font-style: normal;
 }
