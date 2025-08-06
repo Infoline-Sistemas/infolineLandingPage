@@ -8,6 +8,9 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-yellow-400: oklch(85.2% 0.199 91.936);
+    --color-blue-300: oklch(80.9% 0.105 251.813);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
@@ -53,6 +56,8 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-primary-2: #0d0e11;
+    --color-primary-1: #ffffff;
   }
 }
 @layer base {
@@ -201,9 +206,6 @@
   }
 }
 @layer utilities {
-  .absolute {
-    position: absolute;
-  }
   .relative {
     position: relative;
   }
@@ -212,12 +214,6 @@
   }
   .top-0 {
     top: calc(var(--spacing) * 0);
-  }
-  .bottom-0 {
-    bottom: calc(var(--spacing) * 0);
-  }
-  .left-0 {
-    left: calc(var(--spacing) * 0);
   }
   .z-50 {
     z-index: 50;
@@ -240,6 +236,9 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
@@ -251,12 +250,6 @@
   }
   .mr-auto {
     margin-right: auto;
-  }
-  .mb-6 {
-    margin-bottom: calc(var(--spacing) * 6);
-  }
-  .ml-auto {
-    margin-left: auto;
   }
   .box-content {
     box-sizing: content-box;
@@ -300,17 +293,11 @@
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
-  .max-w-\[80\%\] {
-    max-width: 80%;
-  }
   .max-w-\[100px\] {
     max-width: 100px;
   }
   .max-w-\[200px\] {
     max-width: 200px;
-  }
-  .max-w-\[300px\] {
-    max-width: 300px;
   }
   .max-w-\[1000px\] {
     max-width: 1000px;
@@ -332,6 +319,9 @@
   }
   .resize {
     resize: both;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -422,20 +412,44 @@
   .border-gray-800 {
     border-color: var(--color-gray-800);
   }
-  .bg-\[\#0d0e11\] {
-    background-color: #0d0e11;
+  .bg-\[\#b6b6b6\] {
+    background-color: #b6b6b6;
+  }
+  .bg-\[\#b8b8b8\] {
+    background-color: #b8b8b8;
+  }
+  .bg-\[\#c7c7c7\] {
+    background-color: #c7c7c7;
+  }
+  .bg-\[\#cfcfcf\] {
+    background-color: #cfcfcf;
   }
   .bg-\[\#cff245\] {
     background-color: #cff245;
   }
+  .bg-\[\#d1d1d1\] {
+    background-color: #d1d1d1;
+  }
+  .bg-\[\#e60303\] {
+    background-color: #e60303;
+  }
   .bg-\[\#ebebeb\]\/5 {
     background-color: color-mix(in oklab, #ebebeb 5%, transparent);
+  }
+  .bg-\[\#f6f7fa00\] {
+    background-color: #f6f7fa00;
   }
   .bg-\[\#f6f7fa\] {
     background-color: #f6f7fa;
   }
+  .bg-\[\#f6f7faaf\] {
+    background-color: #f6f7faaf;
+  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
+  }
+  .bg-primary-1 {
+    background-color: var(--color-primary-1);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -472,9 +486,6 @@
   }
   .pt-12 {
     padding-top: calc(var(--spacing) * 12);
-  }
-  .pb-8 {
-    padding-bottom: calc(var(--spacing) * 8);
   }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
@@ -695,6 +706,11 @@
 @font-face {
   font-family: "Peinaud";
   src: url("./fonts/PeinaudMedium.ttf") format("truetype");
+}
+.inter {
+  font-family: "Inter", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 @property --tw-rotate-x {
   syntax: "*";

@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
+
+
 @font-face {
   font-family: "Peinaud";
   src: url("./fonts/PeinaudMedium.ttf") format("truetype");
 }
-
-@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-primary-2: #0d0e11;
