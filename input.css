@@ -7,9 +7,10 @@
   src: url("./fonts/PeinaudMedium.ttf") format("truetype");
 }
 
-@theme {
+@theme static{
   --color-primary-2: #0d0e11;
   --color-primary-1: #ffffff;
+  --color-danubio: #adc8d7;
 }
 
 .inter {
