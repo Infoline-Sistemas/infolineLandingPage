@@ -1,56 +1,44 @@
 <!doctype html>
 <html id="html" lang="zxx">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Infoline</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="//unpkg.com/alpinejs" defer=""></script>
-    <script src="script.js" defer></script>
-    <link rel="icon" type="image/x-icon" href="./src/imgs/favico.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body class="inter bg-primary-1 text-black antialiased">
-    <header
-      class="bg-primary-1 sticky top-0 z-50 border-b border-gray-800 px-8 py-4"
-    >
-      <div
-        class="mx-auto flex w-full max-w-7xl items-center justify-between text-black"
-      >
-        <a href="/" class="flex items-center gap-2">
-          <span style="font-family: Peinaud" class="text-3xl">Infoline</span>
-        </a>
-        <nav class="hidden gap-8 text-sm md:flex">
-          <a href="#inicio" class="underline">Início</a>
-          <a href="#modulos" class="hover:underline">Módulos</a>
-          <a href="#porque" class="hover:underline">Por que Infoline?</a>
-          <a href="#quemsomos" class="hover:underline">Quem Somos</a>
-          <!-- <a href="#precos" class="hover:underline">Preços</a> -->
-          <!-- <a href="#" class="hover:underline">Blog</a> -->
-        </nav>
-        <a href="" class="rounded-xl border px-4 py-1 text-sm">
-          Entre em contato
-        </a>
-      </div>
-    </header>
-    <section
-      id="inicio"
-      class="bg-primary-1 relative max-h-[900px] items-center overflow-hidden px-8 py-20 text-black"
-    >
-      <div
-        class="mx-auto flex w-full max-w-5xl flex-col items-center gap-6"
-      >
-        <!-- <div class="flex gap-4 items-center">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infoline</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="//unpkg.com/alpinejs" defer=""></script>
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="./src/imgs/favico.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="inter bg-primary-1 text-black antialiased">
+  <header class="bg-primary-1 sticky top-0 z-50 border-b border-gray-800 px-8 py-4">
+    <div class="mx-auto flex w-full max-w-7xl items-center justify-between text-black">
+      <a href="/" class="flex items-center gap-2">
+        <span style="font-family: Peinaud" class="text-3xl">Infoline</span>
+      </a>
+      <nav class="hidden gap-8 text-sm md:flex">
+        <a href="#inicio" class="underline">Início</a>
+        <a href="#modulos" class="hover:underline">Módulos</a>
+        <a href="#porque" class="hover:underline">Por que Infoline?</a>
+        <a href="#quemsomos" class="hover:underline">Quem Somos</a>
+        <!-- <a href="#precos" class="hover:underline">Preços</a> -->
+        <!-- <a href="#" class="hover:underline">Blog</a> -->
+      </nav>
+      <a href="" class="rounded-xl border px-4 py-1 text-sm">
+        Entre em contato
+      </a>
+    </div>
+  </header>
+  <section id="inicio" class="bg-primary-1 relative max-h-[900px] items-center overflow-hidden px-8 py-20 text-black">
+    <div class="mx-auto flex w-full max-w-5xl flex-col items-center gap-6">
+      <!-- <div class="flex gap-4 items-center">
         <div class="flex gap-1">
           <i class="bi bi-star-fill text-yellow-400"></i>
           <i class="bi bi-star-fill text-yellow-400"></i>
@@ -62,16 +50,16 @@
           4.8/5 (45k reviews)
         </span>
       </div> -->
-        <h1 class="text-center text-5xl font-semibold tracking-tighter">
-          Solução completa para o seu negócio
-        </h1>
-        <strong class="text-center text-xl font-normal">
-          Automatize processos e centralize informações com o sistema
-          Infoline<br />
-          O ERP online integrado que maximiza a produtividade e a colaboração da
-          sua equipe.
-        </strong>
-        <!-- <form action="index.php" method="post" class="flex gap-4 items-center">
+      <h1 class="text-center text-5xl font-semibold tracking-tighter">
+        Solução completa para o seu negócio
+      </h1>
+      <strong class="text-center text-xl font-normal">
+        Automatize processos e centralize informações com o sistema
+        Infoline<br />
+        O ERP online integrado que maximiza a produtividade e a colaboração da
+        sua equipe.
+      </strong>
+      <!-- <form action="index.php" method="post" class="flex gap-4 items-center">
         <input name="email" type="email" placeholder="Enter your email"
           class="border border-gray-700 focus:outline-none px-4 py-1 bg-[#ebebeb]/5 rounded-xl">
         <input type="submit" class="cursor-pointer bg-[#cff245] text-black px-4 py-1 rounded-xl" value="Join Waitlist">
@@ -80,218 +68,318 @@
         By clicking Join Waitlist you're confirming that you agree with our <a href="#" class="underline">Terms and
           Conditions</a>.
       </small> -->
-        <div class="mt-20">
-          <img
-            src="./src/imgs/hero-4k.png"
-            class="mx-auto w-full max-w-[1000px] rounded shadow-2xl"
-            alt=""
-          />
-        </div>
+      <div class="mt-20">
+        <img src="./src/imgs/hero-4k.png" class="mx-auto w-full max-w-[1000px] rounded shadow-2xl" alt="" />
       </div>
-    </section>
-    <section id="modulos" class="rounded-3xl bg-[#d1d1d1] px-8 py-20">
-      <div class="mx-auto flex w-full max-w-5xl flex-col items-center gap-16">
-        <h2 class="text-center text-5xl font-semibold tracking-tighter">
-          Módulos
-        </h2>
-        <div class="flex grid-cols-1 flex-col gap-4 md:grid">
-          <div
-            class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px]  overflow-hidden rounded-3xl bg-white p-8"
-          >
-            <div>
-              <h3 class="text-xl font-bold">Comercial</h3>
-              <p class="text-sm text-gray-600">
-                Configure como quer que as notas e pedidos sejam emitidas,
-                impostos, e muito mais. Tudo de forma simples e rápida.
-              </p>
-              </div>
-              <img src="./src/imgs/tiposNotas.png" class="mx-auto mt-6" alt="" />
-          </div>
-
-           <div
-            class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px]  overflow-hidden rounded-3xl bg-white p-8"
-          >
-          
-              <img src="./src/imgs/tiposNotas.png" class="mx-auto mt-6" alt="" />
-              <div>
-              <h3 class="text-xl font-bold">Contabilidade e Fiscal</h3>
-              <p class="text-sm text-gray-600">
-                Configure como quer que as notas e pedidos sejam emitidas,
-                impostos, e muito mais. Tudo de forma simples e rápida.
-              </p>
-              </div>
-          </div>
-
-                   <div
-            class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px]  overflow-hidden rounded-3xl bg-white p-8"
-          >
-            <div>
-              <h3 class="text-xl font-bold">Financeiro</h3>
-              <p class="text-sm text-gray-600">
-                Configure como quer que as notas e pedidos sejam emitidas,
-                impostos, e muito mais. Tudo de forma simples e rápida.
-              </p>
-              </div>
-              <img src="./src/imgs/tiposNotas.png" class="mx-auto mt-6" alt="" />
-          </div>
-
-            <div
-            class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px]  overflow-hidden rounded-3xl bg-white p-8"
-          >
-          
-              <img src="./src/imgs/tiposNotas.png" class="mx-auto mt-6" alt="" />
-              <div>
-              <h3 class="text-xl font-bold">Recursos Humanos</h3>
-              <p class="text-sm text-gray-600">
-                Configure como quer que as notas e pedidos sejam emitidas,
-                impostos, e muito mais. Tudo de forma simples e rápida.
-              </p>
-              </div>
-          </div>
-
-                   <div
-            class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px]  overflow-hidden rounded-3xl bg-white p-8"
-          >
-            <div>
-              <h3 class="text-xl font-bold">Relacionamento com o Cliente</h3>
-              <p class="text-sm text-gray-600">
-                Configure como quer que as notas e pedidos sejam emitidas,
-                impostos, e muito mais. Tudo de forma simples e rápida.
-              </p>
-              </div>
-              <img src="./src/imgs/tiposNotas.png" class="mx-auto mt-6" alt="" />
-          </div>
-
-            <div
-            class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px]  overflow-hidden rounded-3xl bg-white p-8"
-          >
-          
-              <img src="./src/imgs/tiposNotas.png" class="mx-auto mt-6" alt="" />
-              <div>
-              <h3 class="text-xl font-bold">Compras e Suprimentos</h3>
-              <p class="text-sm text-gray-600">
-                Configure como quer que as notas e pedidos sejam emitidas,
-                impostos, e muito mais. Tudo de forma simples e rápida.
-              </p>
-              </div>
-          </div>
-
-                   <div
-            class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px]  overflow-hidden rounded-3xl bg-white p-8"
-          >
-            <div>
-              <h3 class="text-xl font-bold">Gestão de Custos</h3>
-              <p class="text-sm text-gray-600">
-                Configure como quer que as notas e pedidos sejam emitidas,
-                impostos, e muito mais. Tudo de forma simples e rápida.
-              </p>
-              </div>
-              <img src="./src/imgs/tiposNotas.png" class="mx-auto mt-6" alt="" />
-          </div>
-
-            <div
-            class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px]  overflow-hidden rounded-3xl bg-white p-8"
-          >
-          
-              <img src="./src/imgs/tiposNotas.png" class="mx-auto mt-6" alt="" />
-              <div>
-              <h3 class="text-xl font-bold">PCPM</h3>
-              <p class="text-sm text-gray-600">
-                Configure como quer que as notas e pedidos sejam emitidas,
-                impostos, e muito mais. Tudo de forma simples e rápida.
-              </p>
-              </div>
-          </div>
-                   <div
-            class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px]  overflow-hidden rounded-3xl bg-white p-8"
-          >
-              <div>
-              <h3 class="text-xl font-bold">WMS</h3>
-              <p class="text-sm text-gray-600">
-                Configure como quer que as notas e pedidos sejam emitidas,
-                impostos, e muito mais. Tudo de forma simples e rápida.
-              </p>
-              </div>
-              <img src="./src/imgs/tiposNotas.png" class="mx-auto mt-6" alt="" />
-          </div>
-
-            <div
-            class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px]  overflow-hidden rounded-3xl bg-white p-8"
-          >
-          
-              <img src="./src/imgs/tiposNotas.png" class="mx-auto mt-6" alt="" />
-              <div>
-              <h3 class="text-xl font-bold">Controladoria e Custos</h3>
-              <p class="text-sm text-gray-600">
-                Configure como quer que as notas e pedidos sejam emitidas,
-                impostos, e muito mais. Tudo de forma simples e rápida.
-              </p>
-              </div>
-          </div>
-
-                             <div
-            class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px]  overflow-hidden rounded-3xl bg-white p-8"
-          >
-              <div>
-              <h3 class="text-xl font-bold">Gestão de processos</h3>
-              <p class="text-sm text-gray-600">
-                Configure como quer que as notas e pedidos sejam emitidas,
-                impostos, e muito mais. Tudo de forma simples e rápida.
-              </p>
-              </div>
-              <img src="./src/imgs/tiposNotas.png" class="mx-auto mt-6" alt="" />
-          </div>
-      </div>
-    </section>
-    <section id="porque" class="px-8 py-20">
-      <div class="mx-auto flex w-full max-w-5xl flex-col items-center gap-16 ">
-        <h2 class="text-center text-5xl font-semibold tracking-tighter">
-          Por que escolher o Infoline?
-        </h2>
-        <div class="flex w-full flex-wrap justify-center gap-4">
-          <div
-            class="box-content flex w-full max-w-[300px] flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-8"
-          >
-            <i class="bi bi-check-circle-fill text-4xl"></i>
-            <span class="text-center font-bold">Solução Completa</span>
-          </div>
-          <div
-            class="box-content flex w-full max-w-[300px] flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-8"
-          >
-            <i class="bi bi-speedometer2 text-4xl"></i>
-            <span class="text-center font-bold">Alta Performance</span>
-          </div>
-          <div
-            class="box-content flex w-full max-w-[300px] flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-8"
-          >
-            <i class="bi bi-shield-lock-fill text-4xl"></i>
-            <span class="text-center font-bold">Segurança de Dados</span>
-          </div>
-          <div
-            class="box-content flex w-full max-w-[300px] flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-8"
-          >
-            <i class="bi bi-chat-dots-fill text-4xl"></i>
-            <span class="text-center font-bold">Suporte Dedicado</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="quemsomos" class="px-8 py-20  rounded-3xl bg-[#d1d1d1]">
-      <div class="mx-auto flex w-full max-w-xl flex-col items-center gap-16 ">
-        <h2 class="text-center text-5xl font-semibold tracking-tighter">
-          Quem somos?
-        </h2>
-         <img src="./src/imgs/quemsomos.avif" class="mx-auto mt-6" alt="" />
-        <p class="mt-2 text-xl ">
-Atuando desde 2.001 no mercado de Soluções em Software, atendendo atualmente na região Sul: Paraná e Santa Catarina, a INFOLINE tem soluções integradas de gestão para todas as áreas.
-
-Com o compromisso de oferecer soluções seguras e com alto desempenho, aliando qualidade, inovação, agilidade e excelente conhecimento de negócio, a INFOLINE desenvolve softwares com alto desempenho: Sistema ERP Infoline, Sistemas sob demanda, APPs Mobiles, colocando à disposição dos clientes a excelência em tecnologia de gestão empresarial.
-
-Estando sempre a frente das inovações tecnológicas em software e banco de dados, a INFOLINE oferece soluções práticas em gestão corporativa, utilizando a plataforma WEB, buscando sempre o atendimento personalizado e valorização dos clientes.
+    </div>
+  </section>
+  <section id="modulos" class="rounded-3xl bg-[#d1d1d1] px-8 py-20">
+    <div class="mx-auto flex w-full max-w-5xl flex-col items-center gap-16">
+      <h2 class="text-center text-5xl font-semibold tracking-tighter">
+        Módulos
+      </h2>
+      <div class="flex grid-cols-1 flex-col gap-4 md:grid">
+        <div
+          class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px] overflow-hidden rounded-3xl bg-white p-8">
+          <div>
+            <h3 class="text-xl font-bold">Comercial</h3>
+            <p class="text-md text-gray-600 text-justify mt-4">
+              A Área Comercial centraliza todas as operações ligadas ao ciclo de vendas, desde a formulação de ofertas
+              até a
+              integração financeira. O processo começa com a definição de preços e geração de orçamentos personalizados,
+              garantindo
+              flexibilidade e agilidade no atendimento ao cliente. A partir disso, é possível programar entregas
+              conforme a demanda,
+              registrar pedidos de venda e, automaticamente, gerar as notas fiscais correspondentes. Cada pedido emitido
+              já realiza a
+              baixa automática do estoque, mantendo o controle logístico em tempo real. Além disso, todas as
+              movimentações comerciais
+              são integradas instantaneamente aos módulos contábil, fiscal e financeiro, eliminando retrabalho e
+              reduzindo riscos de
+              inconsistência. O sistema também oferece recursos de previsão de vendas, permitindo análises estratégicas
+              mais
+              assertivas para o planejamento comercial da empresa.
             </p>
+          </div>
+          <img src="./src/imgs/comercial.jpg" class="mx-auto w-full h-full rounded-lg" alt="" />
+        </div>
+
+        <div
+          class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px] overflow-hidden rounded-3xl bg-white p-8">
+
+          <img src="./src/imgs/contabilidade-fiscal.jpg" class="mx-auto w-full h-full rounded-lg" alt="" />
+          <div>
+            <h3 class="text-xl font-bold">Contabilidade e Fiscal</h3>
+            <p class="text-md text-gray-600 text-justify mt-4">
+              A Área de Contabilidade e Fiscal concentra todas as rotinas obrigatórias e estratégicas voltadas à
+              escrituração contábil
+              e ao cumprimento das obrigações fiscais da empresa. O sistema permite o controle preciso de lotes de
+              lançamentos
+              contábeis, bem como a utilização de estruturas alternativas de balanços e balancetes, facilitando análises
+              sob
+              diferentes perspectivas. Na parte fiscal, oferece suporte completo à escrita de livros de entrada e saída
+              (modelos P1,
+              P1A, P2 e P2A), com emissão automática de termos de abertura e encerramento. Também realiza a geração dos
+              arquivos
+              Sintegra e Valida-PR, garantindo conformidade com as exigências dos órgãos fiscalizadores. A apuração de
+              impostos é
+              feita de forma integrada e confiável, com suporte ao controle patrimonial e à gestão do CIAP (Controle de
+              Crédito de
+              ICMS do Ativo Permanente – Modelo C), assegurando rastreabilidade e eficiência no aproveitamento de
+              créditos fiscais.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px] overflow-hidden rounded-3xl bg-white p-8">
+          <div>
+            <h3 class="text-xl font-bold">Financeiro</h3>
+            <p class="text-md text-gray-600 text-justify mt-4">
+              A Área Financeira oferece uma gestão completa e integrada de todas as movimentações monetárias da empresa.
+              Com recursos
+              para controle de contas a pagar e a receber, o sistema também permite o acompanhamento de previsões
+              financeiras futuras,
+              contribuindo para um planejamento mais eficiente. O fluxo de caixa é monitorado em tempo real, oferecendo
+              visibilidade
+              clara sobre a saúde financeira do negócio. Além disso, o módulo gerencia contas correntes de forma
+              centralizada, com
+              funcionalidades como emissão de cheques e conciliação bancária. Para automatizar ainda mais as rotinas, o
+              sistema conta
+              com integração aos principais bancos por meio do padrão CNAB (remessa e retorno), reduzindo lançamentos
+              manuais e
+              otimizando o relacionamento com instituições financeiras.
+            </p>
+          </div>
+          <img src="./src/imgs/financeiro.jpg" class="mx-auto w-full h-full rounded-lg" alt="" />
+        </div>
+
+        <div
+          class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px] overflow-hidden rounded-3xl bg-white p-8">
+
+          <img src="./src/imgs/recursos-humanos.jpg" class="mx-auto w-full h-full rounded-lg" alt="" />
+          <div>
+            <h3 class="text-xl font-bold">Recursos Humanos</h3>
+            <p class="text-md text-gray-600 text-justify mt-4">
+              A Área de Recursos Humanos reúne ferramentas essenciais para a gestão estratégica e operacional das
+              pessoas dentro da
+              organização. Com funcionalidades voltadas tanto à gestão de pessoas quanto à administração de pessoal, o
+              sistema permite
+              o controle completo da folha de pagamento, com emissão de holerites e geração automática de obrigações
+              acessórias como
+              CAGED, SEFIP, DIRF e RAIS. A integração com sistemas de ponto eletrônico agiliza o controle de jornada e
+              facilita o
+              cumprimento das exigências legais. Também oferece suporte à implementação de programas de participação nos
+              resultados
+              (PPR), fortalecendo o engajamento e a valorização dos colaboradores. Recursos voltados à saúde e segurança
+              do trabalho,
+              além de ferramentas para aplicação e análise de pesquisas de clima organizacional, completam o módulo,
+              permitindo uma
+              gestão mais humanizada e eficiente do capital humano.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px] overflow-hidden rounded-3xl bg-white p-8">
+          <div>
+            <h3 class="text-xl font-bold">Relacionamento com o Cliente</h3>
+            <p class="text-md text-gray-600 text-justify mt-4">
+              A Área de Relacionamento com o Cliente é voltada à construção e manutenção de vínculos duradouros com a
+              base de
+              clientes, por meio de processos estruturados e ferramentas inteligentes. Com um sistema completo de CRM, a
+              empresa pode
+              registrar e acompanhar todo o histórico de interações, garantindo uma visão 360° do cliente e promovendo
+              um atendimento
+              mais personalizado. O módulo de follow-up automatiza lembretes e tarefas de acompanhamento, evitando
+              esquecimentos e
+              melhorando a qualidade do contato. Já os fluxos de trabalho (workflows) otimizam os processos internos,
+              assegurando que
+              cada etapa do atendimento seja executada com eficiência, previsibilidade e agilidade.
+            </p>
+          </div>
+          <img src="./src/imgs/relacionamento-cliente.jpg" class="mx-auto w-full h-full rounded-lg" alt="" />
+        </div>
+
+        <div
+          class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px] overflow-hidden rounded-3xl bg-white p-8">
+
+          <img src="./src/imgs/compras-suprimentos.jpg" class="mx-auto w-full h-full rounded-lg" alt="" />
+          <div>
+            <h3 class="text-xl font-bold">Compras e Suprimentos</h3>
+            <p class="text-md text-gray-600 text-justify mt-4">
+              A Área de Compras e Suprimentos gerencia toda a cadeia de aquisição de materiais e serviços de forma
+              automatizada e
+              integrada. O processo se inicia com a geração de solicitações de compras, que evoluem para cotações e
+              posterior emissão
+              de pedidos formais. Ao receber os materiais, o sistema realiza a entrada automática no estoque, mantendo a
+              rastreabilidade e o controle dos níveis de suprimento em tempo real. Toda essa movimentação é integrada
+              automaticamente
+              com os módulos fiscal, contábil, patrimonial e financeiro, garantindo que os impactos da compra sejam
+              refletidos de
+              forma consistente em todas as áreas da empresa.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px] overflow-hidden rounded-3xl bg-white p-8">
+          <div>
+            <h3 class="text-xl font-bold">Gestão de Custos</h3>
+            <p class="text-md text-gray-600 text-justify mt-4">
+              A Área de Custos oferece recursos robustos para o controle e análise detalhada dos elementos que compõem o
+              custo de
+              produção e operação da empresa. Com o cálculo preciso de hora máquina e hora homem, é possível mensurar
+              com clareza o
+              custo real de cada atividade. O sistema também permite a gestão de insumos e a formação de preços de venda
+              de forma
+              estratégica, considerando todos os fatores envolvidos no processo produtivo. Isso garante maior
+              assertividade na
+              precificação, contribuindo para a competitividade e a rentabilidade do negócio.
+            </p>
+          </div>
+          <img src="./src/imgs/gestao-custo.jpg" class="mx-auto w-full h-full rounded-lg" alt="" />
+        </div>
+
+        <div
+          class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px] overflow-hidden rounded-3xl bg-white p-8">
+
+          <img src="./src/imgs/pcpm.jpg" class="mx-auto w-full h-full rounded-lg" alt="" />
+          <div>
+            <h3 class="text-xl font-bold">PCPM</h3>
+            <p class="text-md text-gray-600 text-justify mt-4">
+              A Área Industrial PCPM (Planejamento, Controle e Programação da Produção) integra todas as etapas do
+              processo produtivo,
+              garantindo maior eficiência, controle e previsibilidade na operação. O módulo de Engenharia permite o
+              cadastro
+              estruturado de produtos e processos, servindo como base para o planejamento de materiais e recursos.
+              Através de
+              ferramentas avançadas de controle de produção e cálculo de carga máquina, é possível otimizar a alocação
+              dos recursos
+              fabris e monitorar o andamento das ordens de produção em tempo real. Com a utilização do modelo MRPII
+              (Manufacturing
+              Resource Planning), o sistema assegura um planejamento integrado da produção com os demais setores da
+              empresa,
+              promovendo uma gestão industrial mais estratégica e orientada por dados.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px] overflow-hidden rounded-3xl bg-white p-8">
+          <div>
+            <h3 class="text-xl font-bold">WMS</h3>
+            <p class="text-md text-gray-600 text-justify mt-4">
+              A Área WMS (Warehouse Management System) oferece controle total e preciso do estoque por meio de
+              endereçamento logístico
+              detalhado, considerando armazém, rua, prateleira e demais níveis de localização. Com suporte a códigos de
+              produto
+              inteligentes ou sequenciais, o sistema facilita a identificação e o rastreamento de itens no depósito.
+              Também permite o
+              gerenciamento eficiente de reservas de produtos, evitando conflitos de alocação e garantindo agilidade na
+              separação de
+              pedidos. O módulo inclui recursos para inventário cíclico e contagem física, assegurando a acuracidade dos
+              saldos em
+              estoque. Para otimizar ainda mais as operações, o sistema integra a emissão de etiquetas e a leitura via
+              códigos de
+              barras, reduzindo erros manuais e acelerando os processos de conferência, movimentação e expedição.
+            </p>
+          </div>
+          <img src="./src/imgs/wms.jpg" class="mx-auto w-full h-full rounded-lg" alt="" />
+        </div>
+
+        <div
+          class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px] overflow-hidden rounded-3xl bg-white p-8">
+
+          <img src="./src/imgs/controladoria-custos.jpg" class="mx-auto w-full h-full rounded-lg" alt="" />
+          <div>
+            <h3 class="text-xl font-bold">Controladoria e Custos</h3>
+            <p class="text-md text-gray-600 text-justify mt-4">
+              A Área de Controladoria e Custos oferece uma visão aprofundada e estratégica sobre a formação dos custos
+              dentro da
+              organização. Com recursos para apuração do custo estrutural, custo ABC (Activity-Based Costing) e custo
+              real, o sistema
+              possibilita análises detalhadas que orientam decisões mais precisas e fundamentadas. Além disso, o módulo
+              apoia a
+              definição e implementação de estratégias de preços alinhadas aos custos reais e às dinâmicas do mercado,
+              garantindo
+              maior competitividade e rentabilidade. Essa integração de informações possibilita um controle financeiro
+              mais rigoroso e
+              a otimização dos resultados empresariais.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="flex grid-cols-2 flex-col gap-4 md:grid items-left relative col-span-1 min-h-[500px] overflow-hidden rounded-3xl bg-white p-8">
+          <div>
+            <h3 class="text-xl font-bold">Gestão de Processos</h3>
+            <p class="text-md text-gray-600 text-justify mt-4">
+              A Gestão de Processos, por meio da implementação de workflows automatizados, garante o controle e a
+              padronização das
+              atividades dentro da empresa. Essa ferramenta permite definir, monitorar e otimizar o fluxo de tarefas,
+              assegurando que
+              cada etapa seja executada no tempo certo e na sequência correta. Com isso, reduz-se a margem de erro,
+              aumenta-se a
+              eficiência operacional e facilita-se o acompanhamento dos processos, promovendo maior transparência e
+              agilidade na
+              tomada de decisão.
+            </p>
+          </div>
+          <img src="./src/imgs/gestao-processos.jpg" class="mx-auto w-full h-full rounded-lg" alt="" />
+        </div>
       </div>
-    </section>
-    <!-- <section class="px-8 py-20">
+  </section>
+  <section id="porque" class="px-8 py-20">
+    <div class="mx-auto flex w-full max-w-5xl flex-col items-center gap-16 ">
+      <h2 class="text-center text-5xl font-semibold tracking-tighter">
+        Por que escolher o Infoline?
+      </h2>
+      <div class="flex w-full flex-wrap justify-center gap-4">
+        <div
+          class="box-content flex w-full max-w-[300px] flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-8">
+          <i class="bi bi-check-circle-fill text-4xl"></i>
+          <span class="text-center font-bold">Solução Completa</span>
+        </div>
+        <div
+          class="box-content flex w-full max-w-[300px] flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-8">
+          <i class="bi bi-speedometer2 text-4xl"></i>
+          <span class="text-center font-bold">Alta Performance</span>
+        </div>
+        <div
+          class="box-content flex w-full max-w-[300px] flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-8">
+          <i class="bi bi-shield-lock-fill text-4xl"></i>
+          <span class="text-center font-bold">Segurança de Dados</span>
+        </div>
+        <div
+          class="box-content flex w-full max-w-[300px] flex-col items-center gap-2 rounded-xl border border-gray-200 bg-white p-8">
+          <i class="bi bi-chat-dots-fill text-4xl"></i>
+          <span class="text-center font-bold">Suporte Dedicado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="quemsomos" class="px-8 py-20  rounded-3xl bg-[#d1d1d1]">
+    <div class="mx-auto flex w-full max-w-xl flex-col items-center gap-16 ">
+      <h2 class="text-center text-5xl font-semibold tracking-tighter">
+        Quem somos?
+      </h2>
+      <img src="./src/imgs/quemsomos.avif" class="mx-auto w-full h-full rounded-lg" alt="" />
+      <p class="mt-2 text-xl ">
+        Atuando desde 2.001 no mercado de Soluções em Software, atendendo atualmente na região Sul: Paraná e Santa
+        Catarina, a INFOLINE tem soluções integradas de gestão para todas as áreas.
+
+        Com o compromisso de oferecer soluções seguras e com alto desempenho, aliando qualidade, inovação, agilidade e
+        excelente conhecimento de negócio, a INFOLINE desenvolve softwares com alto desempenho: Sistema ERP Infoline,
+        Sistemas sob demanda, APPs Mobiles, colocando à disposição dos clientes a excelência em tecnologia de gestão
+        empresarial.
+
+        Estando sempre a frente das inovações tecnológicas em software e banco de dados, a INFOLINE oferece soluções
+        práticas em gestão corporativa, utilizando a plataforma WEB, buscando sempre o atendimento personalizado e
+        valorização dos clientes.
+      </p>
+    </div>
+  </section>
+  <!-- <section class="px-8 py-20">
       <div class="mx-auto flex w-full max-w-3xl flex-col items-center gap-16">
         <h2
           class="text-center text-5xl font-semibold tracking-tighter text-white"
@@ -406,7 +494,7 @@ Estando sempre a frente das inovações tecnológicas em software e banco de dad
         </div>
       </div>
     </section> -->
-    <!-- <section id="precos" class="px-8 py-20">
+  <!-- <section id="precos" class="px-8 py-20">
       <div class="mx-auto h-full max-w-5xl">
         <div
           class="px-4l mx-auto max-w-7xl pb-10 sm:px-6 lg:px-8 lg:text-center"
@@ -883,7 +971,7 @@ Estando sempre a frente das inovações tecnológicas em software e banco de dad
         </div>
       </div>
     </section> -->
-    <!-- <section class="rounded-3xl bg-[#f6f7fa] py-20">
+  <!-- <section class="rounded-3xl bg-[#f6f7fa] py-20">
       <div class="mx-auto h-full max-w-5xl">
         <div class="flex flex-col gap-12">
           <div>
@@ -966,31 +1054,30 @@ Estando sempre a frente das inovações tecnológicas em software e banco de dad
         </div>
       </div>
     </section> -->
-    <footer class="flex flex-col gap-12  text-black px-8 py-20 ">
-      <div class="mx-auto max-w-5xl">
-        <div>
-          <div class="">
-            <div class="inline-flex items-center gap-3">
-              <p class="text-2xl font-bold ">Infoline Sistemas de Gestão empresarial</p>
-            </div>
-            <p class="mt-2 text-sm ">
-              +55 (41) 3014-0075<br>
-              Avenida: República Argentina n°2403 cj 86 Cep: 80610-260<br>
-              Curitiba, Brasil<br>
-              E-mail: comercial@infolinesystems.com.br<br>
-            </p>
+  <footer class="flex flex-col gap-12  text-black px-8 py-20 ">
+    <div class="mx-auto max-w-5xl">
+      <div>
+        <div class="">
+          <div class="inline-flex items-center gap-3">
+            <p class="text-2xl font-bold ">Infoline Sistemas de Gestão empresarial</p>
           </div>
+          <p class="mt-2 text-sm ">
+            +55 (41) 3014-0075<br>
+            Avenida: República Argentina n°2403 cj 86 Cep: 80610-260<br>
+            Curitiba, Brasil<br>
+            E-mail: comercial@infolinesystems.com.br<br>
+          </p>
         </div>
-        <div
-          class="flex flex-col pt-12 md:flex-row md:items-center md:justify-between"
-        >
-          <!-- <p class="text-left">
+      </div>
+      <div class="flex flex-col pt-12 md:flex-row md:items-center md:justify-between">
+        <!-- <p class="text-left">
             <span class="mx-auto mt-2 text-xs text-gray-500 lg:mx-0">
               © Infoline. All rights reserved
             </span>
           </p> -->
-        </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
