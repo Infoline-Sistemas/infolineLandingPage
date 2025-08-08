@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Peinaud";
-  src: url("./fonts/PeinaudMedium.ttf") format("truetype");
+  src: url("fonts/PeinaudMedium.ttf") format("truetype");
 }
 
 @theme static {

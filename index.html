@@ -405,21 +405,37 @@
     </div>
   </section>
   <footer class="flex flex-col gap-12 text-black px-8 py-20 border-t border-gray-800">
-    <div class="mx-auto max-w-5xl">
-      <div>
-        <div class="">
-          <div class="inline-flex items-center gap-3">
-            <p class="text-2xl font-bold">Infoline Sistemas de Gestão Empresarial</p>
+    <div class="mx-auto w-full max-w-5xl px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Contact Details Column -->
+        <div class="flex flex-col items-center md:items-start gap-4">
+          <span class="text-xl font-semibold">Infoline Sistemas de Gestão Empresarial</span>
+          <div class="flex flex-col items-center md:items-start gap-1">
+            <a href="tel:+554130140075" class="hover:underline">+55 (41) 3014-0075</a>
+            <span class="text-center md:text-left">Avenida República Argentina n°2403 cj 86 Cep: 80610-260</span>
+            <span>Curitiba, Brasil</span>
+            <a href="mailto:comercial@infolinesystems.com.br" class="hover:underline">E-mail:
+              comercial@infolinesystems.com.br</a>
           </div>
-          <p class="mt-2 text-sm">
-            +55 (41) 3014-0075<br>
-            Avenida: República Argentina n°2403 cj 86 Cep: 80610-260<br>
-            Curitiba, Brasil<br>
-            E-mail: comercial@infolinesystems.com.br<br>
-          </p>
+        </div>
+              <!-- Map Column -->
+      <div class="flex flex-col items-center md:items-start gap-4">
+        <iframe
+          width="400"
+          height="300"
+          frameborder="0"
+          scrolling="no"
+          class="max-w-full w-full rounded-lg"
+          src="http://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=Avenida+Rep%C3%BAblica+Argentina+2403,+Curitiba,+Paran%C3%A1&amp;sll=-25.452938,-49.292267&amp;sspn=104.976915,227.8125&amp;ie=UTF8&amp;z=14&amp;iwloc=A&amp;ll=-25.452938,-49.292267&amp;output=embed"
+        ></iframe>
+        <div class="flex flex-col items-center md:items-start gap-1 text-sm">
+          
+          <a
+            href="http://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=Avenida+Rep%C3%BAblica+Argentina+2403,+Curitiba,+Paran%C3%A1&amp;sll=-25.452938,-49.292267&amp;sspn=104.976915,227.8125&amp;ie=UTF8&amp;z=14&amp;iwloc=A&amp;ll=-25.452938,-49.292267"
+            class="text-black hover:underline"
+          >Exibir mapa ampliado</a>
         </div>
       </div>
-      <div class="flex flex-col pt-12 md:flex-row md:items-center md:justify-between">
       </div>
     </div>
   </footer>
