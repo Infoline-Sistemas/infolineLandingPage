@@ -359,31 +359,47 @@
       <h2 class="text-center text-5xl font-semibold tracking-tighter">
         Entre em contato
       </h2>
-      <div class="w-full max-w-lg">
-        <div class="flex flex-col gap-4">
+      <div class="w-full max-w-lg relative">
+        <form id="contact-form" class="flex flex-col gap-4">
           <div class="flex flex-col gap-2">
             <label for="nome" class="text-sm font-medium">Nome</label>
-            <input id="nome" type="text" placeholder="Digite seu nome" class="border border-gray-700 focus:outline-none px-4 py-2 bg-[#ebebeb]/5 rounded-xl" />
+            <input id="nome" name="nome" type="text" placeholder="Digite seu nome" required
+              class="border border-gray-700 focus:outline-none focus:ring-2 focus:ring-danubio px-4 py-2 bg-[#ebebeb]/5 rounded-xl" />
           </div>
           <div class="flex flex-col gap-2">
             <label for="empresa" class="text-sm font-medium">Nome da Empresa</label>
-            <input id="empresa" type="text" placeholder="Digite o nome da empresa" class="border border-gray-700 focus:outline-none px-4 py-2 bg-[#ebebeb]/5 rounded-xl" />
+            <input id="empresa" name="empresa" type="text" placeholder="Digite o nome da empresa" required
+              class="border border-gray-700 focus:outline-none focus:ring-2 focus:ring-danubio px-4 py-2 bg-[#ebebeb]/5 rounded-xl" />
           </div>
           <div class="flex flex-col gap-2">
             <label for="whatsapp" class="text-sm font-medium">Número de WhatsApp</label>
-            <input id="whatsapp" type="tel" placeholder="Digite seu número de WhatsApp" class="border border-gray-700 focus:outline-none px-4 py-2 bg-[#ebebeb]/5 rounded-xl" />
+            <input id="whatsapp" name="whatsapp" type="tel" placeholder="Digite seu número de WhatsApp" required
+              class="border border-gray-700 focus:outline-none focus:ring-2 focus:ring-danubio px-4 py-2 bg-[#ebebeb]/5 rounded-xl" />
           </div>
           <div class="flex flex-col gap-2">
             <label for="email" class="text-sm font-medium">E-mail</label>
-            <input id="email" type="email" placeholder="Digite seu e-mail" class="border border-gray-700 focus:outline-none px-4 py-2 bg-[#ebebeb]/5 rounded-xl" />
+            <input id="email" name="email" type="email" placeholder="Digite seu e-mail" required
+              class="border border-gray-700 focus:outline-none focus:ring-2 focus:ring-danubio px-4 py-2 bg-[#ebebeb]/5 rounded-xl" />
           </div>
           <div class="flex flex-col gap-2">
-            <label for="mensagem" class="text-sm font-medium">Descreva suas necessidades</label>
-            <textarea id="mensagem" placeholder="Descreva como podemos ajudar seu negócio" rows="5" class="border border-gray-700 focus:outline-none px-4 py-2 bg-[#ebebeb]/5 rounded-xl resize-none"></textarea>
+            <label for="necessidades" class="text-sm font-medium">Descreva suas necessidades</label>
+            <textarea id="necessidades" name="needs" placeholder="Descreva como podemos ajudar seu negócio" rows="5" required
+              class="border border-gray-700 focus:outline-none focus:ring-2 focus:ring-danubio px-4 py-2 bg-[#ebebeb]/5 rounded-xl resize-none"></textarea>
           </div>
-          <button class="cursor-pointer bg-green-400 text-black px-4 py-2 rounded-xl font-semibold hover:bg-green-500 transition-all">
+          <button type="submit"
+            class="cursor-pointer bg-green-400 px-4 py-2 rounded-xl font-semibold hover:bg-opacity-90 transition-all">
             Enviar
           </button>
+        </form>
+  
+        <!-- Success Popup -->
+        <div id="success-popup" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50">
+          <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full transform transition-all duration-300 animate-popup">
+            <h3 class="text-lg font-semibold text-gray-800">Sucesso!</h3>
+            <p class="text-gray-600 mt-2">Formulário enviado com sucesso. Entraremos em contato em breve!</p>
+            <button id="close-popup"
+              class="mt-4 bg-blue-400 text-white px-4 py-2 rounded-xl font-semibold hover:bg-opacity-90 transition-all">Fechar</button>
+          </div>
         </div>
       </div>
     </div>

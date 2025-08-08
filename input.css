@@ -1,13 +1,11 @@
 @import "tailwindcss";
 
-
-
 @font-face {
   font-family: "Peinaud";
   src: url("./fonts/PeinaudMedium.ttf") format("truetype");
 }
 
-@theme static{
+@theme static {
   --color-primary-2: #0d0e11;
   --color-primary-1: #ffffff;
   --color-danubio: #adc8d7;
@@ -21,4 +19,20 @@
 
 .peinaud {
   font-family: "Peinaud";
+}
+
+/* Popup animation */
+@keyframes popup {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-popup {
+  animation: popup 0.3s ease-out forwards;
 }
