@@ -1,7 +1,7 @@
 <!doctype html>
 <html id="html" lang="zxx">
 
-<head>
+  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Infoline</title>
@@ -17,10 +17,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet" />
+  <style>[x-cloak]{display:none!important;}</style>
 </head>
 
 <body class="inter bg-white text-black antialiased">
-  <header class="bg-white sticky top-0 z-50 border-b border-gray-800 px-8 py-4">
+  <header x-data="{ mobileOpen: false }" class="bg-white sticky top-0 z-50 border-b border-gray-800 px-8 py-4">
     <div class="mx-auto flex w-full max-w-7xl items-center justify-between text-black">
       <a href="/" class="flex items-center gap-2">
         <span style="font-family: Peinaud" class="text-3xl">Infoline</span>
@@ -38,7 +39,7 @@
             Links
             <i class="bi bi-chevron-down text-xs" :class="{ 'rotate-180': open }"></i>
           </button>
-          <div x-show="open" @click.away="open = false" 
+          <div x-cloak x-show="open" @click.away="open = false" 
                x-transition:enter="transition ease-out duration-200"
                x-transition:enter-start="opacity-0 scale-95"
                x-transition:enter-end="opacity-100 scale-100"
@@ -52,7 +53,7 @@
                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
                 InfolineV3.1
               </a>
-              <a href="http://infolineweb.servehttp.com:8888/InfolineV3" target="_blank" 
+              <a href="https://erp.infoline.app.br/InfolineV3" target="_blank" 
                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
                 InfolineV3
               </a>
@@ -60,9 +61,27 @@
           </div>
         </div>
       </nav>
-      <a href="#entreemcontato" class="rounded-xl bg-white border px-4 py-1 text-sm">
-        Entre em contato
-      </a>
+      <div class="flex items-center gap-2">
+        <a href="#entreemcontato" class="rounded-xl bg-white border px-4 py-1 text-sm">
+          Entre em contato
+        </a>
+        <button @click="mobileOpen = !mobileOpen" class="md:hidden rounded-md p-2 hover:bg-gray-100" aria-label="Abrir menu">
+          <i :class="mobileOpen ? 'bi bi-x-lg' : 'bi bi-list'" class="text-2xl"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile dropdown menu (visible only on small screens) -->
+    <div x-cloak x-show="mobileOpen" @click.away="mobileOpen = false" x-transition class="md:hidden absolute right-4 top-full mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+      <div class="py-2 flex flex-col gap-1">
+        <a @click="mobileOpen = false" href="#inicio" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Início</a>
+        <a @click="mobileOpen = false" href="#modulos" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Módulos</a>
+        <a @click="mobileOpen = false" href="#porque" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Por que Infoline?</a>
+        <a @click="mobileOpen = false" href="#quemsomos" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Quem Somos</a>
+        <a @click="mobileOpen = false" href="#entreemcontato" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Entre em contato</a>
+        <div class="border-t border-gray-100 mt-1 pt-2"></div>
+        <a @click="mobileOpen = false" href="https://erp.infolinesystems.app.br/InfolineV3.1" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">InfolineV3.1</a>
+        <a @click="mobileOpen = false" href="https://erp.infoline.app.br/InfolineV3" target="_blank" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">InfolineV3</a>
+      </div>
     </div>
   </header>
   <section id="inicio" class="rounded-b-3xl bg-[#AEC9D8] relative max-h-[900px] items-center overflow-hidden px-8 py-20 text-black">
@@ -466,8 +485,8 @@
       </div>
     </div>
   </footer>
-  <a href="https://wa.me/+5541988538135?text=Ol%C3%A1%21%20Estou%20interessado%20em%20saber%20mais%20sobre%20o%20seu%20sistema%20ERP%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.%20Pode%20me%20ajudar%20com%20mais%20detalhes%3F"  target="_blank"
-     class="fixed bottom-8 right-8 bg-green-400 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-500 transition-all z-50">
+    <a href="https://wa.me/5541988538135" target="_blank"
+      class="fixed bottom-8 right-8 bg-green-400 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-500 transition-all z-50">
     <i class="bi bi-whatsapp text-2xl"></i>
   </a>
 </body>
