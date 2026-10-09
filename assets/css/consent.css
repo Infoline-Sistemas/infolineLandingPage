@@ -1,0 +1,25 @@
+.cookie-settings-link { background:none; border:0; padding:0; color:inherit; font:inherit; text-align:left; cursor:pointer; }
+.cookie-settings-link:hover { text-decoration:underline; }
+.cookie-banner[hidden] { display:none; }
+.cookie-banner { position:fixed; z-index:1200; inset:auto 20px 20px; max-width:1180px; margin:auto; display:flex; align-items:center; gap:24px; padding:24px; border:1px solid #cbd5e1; border-radius:18px; background:#fff; color:#162b43; box-shadow:0 12px 55px #10243c38; }
+.cookie-banner h2, .cookie-dialog h2 { font-size:20px; line-height:1.3; margin:0 0 8px; }
+.cookie-banner p, .cookie-dialog p { font-size:14px; line-height:1.6; margin:0; }
+.cookie-banner a, .cookie-dialog a { color:#0b3d91; text-decoration:underline; }
+.cookie-banner-copy { flex:1; min-width:0; }
+.cookie-actions { display:flex; flex-wrap:wrap; gap:10px; }
+.cookie-actions button { border:1px solid #0b3d91; border-radius:9px; padding:11px 15px; color:#0b3d91; background:#fff; font:inherit; font-size:14px; font-weight:700; cursor:pointer; }
+.cookie-actions button:hover { background:#edf3fc; }
+.cookie-actions button[data-cookie-action="accept"], .cookie-actions button[data-cookie-action="save"] { background:#0b3d91; color:#fff; }
+.cookie-actions button:focus-visible, .cookie-settings-link:focus-visible, [data-cookie-close]:focus-visible { outline:3px solid #438aff; outline-offset:3px; }
+.cookie-dialog { width:min(580px, calc(100% - 32px)); max-height:calc(100dvh - 32px); margin:auto; padding:26px; border:1px solid #cbd5e1; border-radius:18px; background:#fff; color:#162b43; overflow:auto; }
+.cookie-dialog::backdrop { background:#091b35aa; }
+.cookie-dialog-header { display:flex; justify-content:space-between; align-items:start; gap:12px; }
+[data-cookie-close] { border:0; background:#edf3fc; color:#162b43; border-radius:8px; min-width:36px; height:36px; font-size:26px; cursor:pointer; }
+.cookie-option { display:flex; gap:12px; padding:16px 0; margin:0; border-bottom:1px solid #dce4ed; font-size:15px; }
+div.cookie-option { display:block; }
+.cookie-option input { flex:none; width:20px; height:20px; margin:2px 0 0; accent-color:#0b3d91; }
+.cookie-option small { display:block; margin-top:5px; font-size:14px; line-height:1.5; }
+.cookie-dialog > a { display:inline-block; margin:18px 0; font-size:14px; }
+body:has(.cookie-banner:not([hidden])) .whatsapp-float, body:has(.cookie-banner:not([hidden])) .mobile-cta-bar { visibility:hidden; }
+@media (max-width:900px) { .cookie-banner { flex-direction:column; align-items:stretch; gap:16px; } }
+@media (max-width:480px) { .cookie-banner { inset:auto 10px 10px; padding:18px; max-height:calc(100dvh - 20px); overflow:auto; } .cookie-actions button { flex:1; padding:10px; } .cookie-dialog { padding:20px; } }

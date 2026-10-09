@@ -1,0 +1,16 @@
+# GitHub Pages publica a raiz da main. Fontes e documentação ficam no Git.
+exclude:
+  - tools
+  - docs
+  - README.md
+  - README-PRODUCAO.md
+  - package.json
+  - package-lock.json
+  - node_modules
+  - dist
+  - input.css
+  - output.css
+  - styles.css
+  - script.js
+  - src
+  - fonts

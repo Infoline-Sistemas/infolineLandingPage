@@ -1,0 +1,5 @@
+.apps-policy { max-width: 760px; }
+.apps-policy h1 { margin-bottom: 36px; }
+.apps-policy h2 { font-size: 22px; margin: 32px 0 12px; }
+.apps-policy .body-text { margin: 0 0 16px; }
+.apps-policy a { color: var(--blue); text-decoration: underline; }
