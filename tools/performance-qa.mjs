@@ -9,7 +9,7 @@ const pages = [
   'custos.html', 'comercial.html', 'crm.html', 'ecommerce.html', 'financeiro.html',
   'integracao-whatsapp.html', 'contabilidade.html', 'controladoria.html', 'rh.html',
   'gestao-processos.html', 'solucoes.html', 'trabalhe-conosco.html',
-  'politica-de-privacidade.html',
+  'politica-de-privacidade.html', 'politicadeprivacidade.html',
 ];
 const baseline = { htmlBytes: 801026, cssBytes: 253029, jsBytes: 41533, assetFiles: 152, scriptReferences: 100 };
 const failures = [];

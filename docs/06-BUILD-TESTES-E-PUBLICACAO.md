@@ -44,7 +44,7 @@ node tools/qa.mjs
 O resultado esperado é semelhante a:
 
 ```text
-QA ok: 20 páginas, metadados e referências locais validados.
+QA ok: 21 páginas, metadados e referências locais validados.
 ```
 
 O número pode crescer quando novas páginas forem adicionadas. Não fixe a documentação à contagem atual como se ela fosse permanente.
@@ -129,7 +129,7 @@ Use uma porta e uma pasta de perfil diferentes para cada sessão simultânea.
 |---|---|
 | `qa.mjs` | todos os HTMLs, metadados e referências |
 | `factual-qa.mjs` | taxonomia, nomenclaturas, integrações e números aprovados |
-| `architecture-qa.mjs` | 20 páginas, 13 `customRenderers` e dependências compartilhadas essenciais |
+| `architecture-qa.mjs` | 21 páginas, 13 `customRenderers` e dependências compartilhadas essenciais |
 | `orphans-qa.mjs` | classificação conservadora dos assets em usado, indireto, candidato e incerto |
 | `accessibility-qa.mjs` | menus, formulários, ARIA, foco, FAQ e fluxos dos módulos |
 | `module-system-qa.mjs` | estrutura compartilhada e interação dos 13 módulos premium |

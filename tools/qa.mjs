@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const preservedPages = new Set(['charlotte-paes-privacidade.html']);
-const pages = fs.readdirSync(root).filter((name) => name.endsWith('.html') && name !== 'politicadeprivacidade.html' && !preservedPages.has(name)).sort();
+const pages = fs.readdirSync(root).filter((name) => name.endsWith('.html') && !preservedPages.has(name)).sort();
 const errors = [];
 const expectedPages = [
   'index.html', 'erp-para-industria.html', 'erp-para-importadores.html',
@@ -12,7 +12,7 @@ const expectedPages = [
   'custos.html', 'comercial.html', 'crm.html', 'ecommerce.html', 'financeiro.html',
   'integracao-whatsapp.html', 'contabilidade.html', 'controladoria.html', 'rh.html',
   'gestao-processos.html', 'solucoes.html', 'trabalhe-conosco.html',
-  'politica-de-privacidade.html',
+  'politica-de-privacidade.html', 'politicadeprivacidade.html',
 ].sort();
 const premiumPages = new Set([
   'pcpm.html', 'wms.html', 'compras.html', 'custos.html', 'comercial.html',
@@ -25,7 +25,7 @@ function fail(page, message) {
 }
 
 if (pages.join('|') !== expectedPages.join('|')) {
-  fail('site', `esperadas 20 páginas oficiais; encontradas: ${pages.join(', ')}`);
+  fail('site', `esperadas ${expectedPages.length} páginas oficiais; encontradas: ${pages.join(', ')}`);
 }
 
 for (const page of pages) {
@@ -76,8 +76,15 @@ for (const page of pages) {
   }
 }
 
-if (fs.readFileSync(path.join(root, 'politicadeprivacidade.html'), 'utf8') !== fs.readFileSync(path.join(root, 'politica-de-privacidade.html'), 'utf8')) {
-  fail('politicadeprivacidade.html', 'a URL antiga precisa manter o conteúdo e o canonical da política atual');
+const appsPolicy = fs.readFileSync(path.join(root, 'politicadeprivacidade.html'), 'utf8');
+const originalPolicy = fs.readFileSync(path.join(root, 'tools/policies/apps-infoline.html'), 'utf8');
+const policyText = (html) => (html.match(/<section\b[^>]*\bid="politica"[^>]*>([\s\S]*?)<\/section>/)?.[1] || '')
+  .replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+if (!policyText(originalPolicy) || policyText(appsPolicy) !== policyText(originalPolicy)) {
+  fail('politicadeprivacidade.html', 'a URL original precisa preservar todo o texto da política dos apps');
+}
+if (!appsPolicy.includes('https://infolinesystems.com.br/politicadeprivacidade.html')) {
+  fail('politicadeprivacidade.html', 'canonical própria da política dos apps ausente');
 }
 
 for (const js of fs.readdirSync(path.join(root, 'assets', 'js')).filter((name) => name.endsWith('.js'))) {

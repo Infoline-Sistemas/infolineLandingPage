@@ -154,7 +154,7 @@ export function footer() {
       <div class="footer-contact">
         <a href="tel:${site.tel}">${icon('i-phone', 'i i-sm')}<span>${site.phoneDisplay}</span></a>
         <a href="mailto:${site.email}">${icon('i-mail', 'i i-sm')}<span>${site.email}</span></a>
-        <a href="${site.mapsUrl}" target="_blank" rel="noopener">${icon('i-pin', 'i i-sm')}<span>${esc(site.address.city)}, ${esc(site.address.region)}</span></a>
+        <a href="${site.mapsUrl}" target="_blank" rel="noopener">${icon('i-pin', 'i i-sm')}<span>${esc(site.address.streetAddress)}<br>CEP ${esc(site.address.postalCode)} · ${esc(site.address.city)}/${esc(site.address.region)}, Brasil</span></a>
       </div>
     </div>
     <nav class="footer-col" aria-label="Soluções (1)"><p>Soluções</p><ul>${sectorPages.map((page) => `<li><a href="${B()}${page.slug}.html">${esc(page.label)}</a></li>`).join('')}${colA.map(modLink).join('')}</ul></nav>
@@ -167,7 +167,8 @@ export function footer() {
         <li><a href="${B()}solucoes.html">Todas as soluções</a></li>
         <li><a href="${B()}trabalhe-conosco.html">Trabalhe conosco</a></li>
         <li><a href="${B()}index.html#contato">Fale com a Infoline</a></li>
-        <li><a href="${B()}politica-de-privacidade.html">Política de privacidade</a></li>
+        <li><a href="${B()}politica-de-privacidade.html">Privacidade do site</a></li>
+        <li><a href="${B()}politicadeprivacidade.html">Privacidade dos apps</a></li>
         <li><button type="button" class="cookie-settings-link" data-cookie-settings>Preferências de cookies</button></li>
       </ul>
     </nav>

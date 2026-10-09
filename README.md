@@ -10,7 +10,7 @@ O site está preparado para o GitHub Pages da Infoline: publicação da raiz da 
 
 Use `npm run build`, `npm run check` e `npm run dev` para gerar, validar e abrir a prévia em `http://127.0.0.1:4175`. `npm run package` cria uma release pública em uma pasta nova dentro de `dist/`.
 
-O envio de demonstrações mantém a chave pública Web3Forms já utilizada. Foram adicionados banner, preferências por finalidade e revogação de consentimento. Os identificadores de Google e Meta permanecem vazios até a configuração das contas pelo responsável. A política antiga, as políticas de aplicativos presentes na `main` e os acessos V3/V3.1 são preservados.
+O envio de demonstrações mantém a chave pública Web3Forms já utilizada. Foram adicionados banner, preferências por finalidade e revogação de consentimento. Os identificadores de Google e Meta permanecem vazios até a configuração das contas pelo responsável. A política dos apps mantém o texto original em `politicadeprivacidade.html`; a política do site fica em `politica-de-privacidade.html`. As demais políticas de aplicativos presentes na `main` e os acessos V3/V3.1 são preservados.
 
 Veja [a integração e as pendências de ativação](docs/11-INTEGRACAO-GITHUB-PAGES.md).
 
@@ -27,6 +27,7 @@ Altere a fonte correspondente:
 - estrutura do portal de soluções: `tools/pages/solucoes.mjs`;
 - estrutura de um módulo aprofundado: `tools/pages/<modulo>.mjs`;
 - estrutura dos módulos ainda não aprofundados: `tools/pages/module.mjs`;
+- texto original da política dos apps: `tools/policies/apps-infoline.html`, renderizado por `tools/pages/privacidade-apps.mjs`;
 - identidade visual compartilhada: `assets/css/base.css`, `components.css`, `module.css` e `module-system.css`;
 - visual específico de um módulo aprofundado: `assets/css/<modulo>.css`;
 - comportamento no navegador: `assets/js/*.js`.

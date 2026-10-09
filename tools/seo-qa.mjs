@@ -10,7 +10,7 @@ const pages = [
   'custos.html', 'comercial.html', 'crm.html', 'ecommerce.html', 'financeiro.html',
   'integracao-whatsapp.html', 'contabilidade.html', 'controladoria.html', 'rh.html',
   'gestao-processos.html', 'solucoes.html', 'trabalhe-conosco.html',
-  'politica-de-privacidade.html',
+  'politica-de-privacidade.html', 'politicadeprivacidade.html',
 ];
 
 const failures = [];
@@ -137,7 +137,7 @@ for (const page of pages) {
   for (const organization of schemas.filter((schema) => schema['@type'] === 'Organization')) {
     if (organization.name !== site.legalName || organization.url !== `${site.url}/` || organization.logo !== `${site.url}/assets/img/logo-mark.svg`) pageFailures.push('Organization com nome, URL ou logo inconsistente');
     if (organization.telephone !== site.tel || organization.email !== site.email) pageFailures.push('Organization com contato inconsistente');
-    if (organization.address?.addressCountry !== site.address.country || organization.address?.addressLocality !== site.address.city) pageFailures.push('Organization com endereço inconsistente');
+    if (organization.address?.addressCountry !== site.address.country || organization.address?.addressLocality !== site.address.city || organization.address?.streetAddress !== site.address.streetAddress || organization.address?.postalCode !== site.address.postalCode) pageFailures.push('Organization com endereço inconsistente');
     if (!Array.isArray(organization.areaServed) || organization.areaServed.join('|') !== site.areaServed.join('|')) pageFailures.push('Organization com areaServed inconsistente');
     if (!Array.isArray(organization.sameAs) || organization.sameAs.some((url) => !/^https:\/\//.test(url))) pageFailures.push('Organization com sameAs inválido');
   }
@@ -193,7 +193,7 @@ const sitemap = readFileSync(join(ROOT, 'sitemap.xml'), 'utf8');
 const sitemapUrls = Array.from(sitemap.matchAll(/<loc>(.*?)<\/loc>/g), (match) => match[1]);
 const sitemapDates = Array.from(sitemap.matchAll(/<lastmod>(.*?)<\/lastmod>/g), (match) => match[1]);
 const expectedUrls = pages.map(expectedUrl);
-if (JSON.stringify(sitemapUrls) !== JSON.stringify(expectedUrls)) failures.push('sitemap.xml não corresponde às 20 canonicals na ordem do build');
+if (JSON.stringify(sitemapUrls) !== JSON.stringify(expectedUrls)) failures.push(`sitemap.xml não corresponde às ${pages.length} canonicals na ordem do build`);
 if (sitemapDates.length !== pages.length || sitemapDates.some((date) => date !== site.sitemapLastmod || !/^\d{4}-\d{2}-\d{2}$/.test(date))) failures.push('sitemap.xml possui lastmod ausente, inválido ou desatualizado');
 const robots = readFileSync(join(ROOT, 'robots.txt'), 'utf8');
 if (!/^User-agent: \*$/m.test(robots) || !/^Allow: \/$/m.test(robots) || !new RegExp(`^Sitemap: ${site.url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\/sitemap\\.xml$`, 'm').test(robots)) failures.push('robots.txt inconsistente');

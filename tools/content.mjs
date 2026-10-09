@@ -17,14 +17,15 @@ export const site = {
   whatsapp: '5541988538135',
   whatsappDisplay: '(41) 98853-8135',
   email: 'comercial@infolinesystems.com.br',
-  // Nenhuma rua/CEP foi encontrada no site público nem nos arquivos do projeto —
-  // por regra do briefing, não inventamos. Mantemos apenas o que é verificável.
+  // Endereço preservado do site anterior e da política dos aplicativos.
   address: {
+    streetAddress: 'Avenida República Argentina, 2403, cj. 86',
+    postalCode: '80610-260',
     city: 'Curitiba',
     region: 'PR',
     country: 'BR',
   },
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Infoline+Sistemas+Curitiba+PR',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Avenida+Rep%C3%BAblica+Argentina+2403,+Curitiba,+PR,+80610-260',
   clientAccess: [
     { label: 'Versão atual', cta: 'Acessar V3.1', url: 'https://erp.infolinesystems.app.br/InfolineV3.1/#/login' },
     { label: 'Versão anterior', cta: 'Acessar V3', url: 'https://erp.infoline.app.br/InfolineV3/#/login' },

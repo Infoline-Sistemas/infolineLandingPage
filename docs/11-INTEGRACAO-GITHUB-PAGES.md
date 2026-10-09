@@ -2,17 +2,19 @@
 
 ## Escopo
 
-O pacote recebido substitui o site institucional e adiciona 20 páginas oficiais. A URL antiga `politicadeprivacidade.html` também é gerada, com o conteúdo e o canonical da política nova. As âncoras antigas da home continuam funcionando. `charlotte-paes-privacidade.html` e `tattooflow/` pertencem às políticas de aplicativos existentes na `main` e devem permanecer intactos.
+O pacote recebido substitui o site institucional e gera 21 páginas, incluindo duas políticas independentes. `politicadeprivacidade.html` mantém todo o texto da política dos apps publicado na `main`, com sua própria canonical e o novo layout. A fonte preservada fica em `tools/policies/apps-infoline.html`. A política do site, usada nos formulários e nas preferências de cookies, fica em `politica-de-privacidade.html`. Ambas têm links identificados no rodapé. `charlotte-paes-privacidade.html` e `tattooflow/` pertencem às demais políticas de aplicativos existentes na `main` e permanecem intactos.
+
+O endereço do site anterior foi restaurado no contato, no rodapé, na política do site e nos dados estruturados: Avenida República Argentina, 2403, cj. 86, CEP 80610-260, Curitiba/PR, Brasil. O link do mapa usa esse endereço por HTTPS.
 
 A publicação atual é GitHub Pages, raiz da `main`, domínio em `CNAME`. A entrega foi preparada em branch nova baseada na `main`. Fazer push nessa branch de trabalho não publica o domínio. A publicação ocorre quando a mudança entra na `main`.
 
 ## Formulários
 
-`config.js` mantém a chave pública Web3Forms já usada no site. Ela identifica o destino do formulário e não é senha nem token privado. `leadEndpoint`, quando configurado, tem prioridade. Sem endpoint e sem chave pública, o fallback por e-mail permanece disponível.
+`config.js` mantém a mesma chave pública Web3Forms e o envio para `https://api.web3forms.com/submit` já usados no site anterior. O e-mail associado à chave é definido no Web3Forms e não aparece no código. Não há substituição do destinatário no envio. `leadEndpoint`, quando configurado, tem prioridade. Sem endpoint e sem chave pública, o fallback por e-mail permanece disponível.
 
 O Web3Forms só confirma sucesso com HTTP válido e `success: true`. Recusa cookies não impede o envio da solicitação. Dados pessoais não entram nos eventos de métricas. A candidatura abre uma mensagem no WhatsApp que o visitante ainda precisa confirmar.
 
-Os testes interceptam Web3Forms e WhatsApp. Eles verificam comportamento, payload e retornos sem enviar mensagens reais. Recebimento efetivo pelo comercial permanece uma verificação de publicação com envio controlado autorizado.
+Os testes interceptam Web3Forms e WhatsApp. Eles verificam comportamento, payload e retornos sem enviar mensagens reais. Recebimento efetivo no e-mail configurado permanece uma verificação de publicação com envio controlado autorizado.
 
 ## Consentimento
 

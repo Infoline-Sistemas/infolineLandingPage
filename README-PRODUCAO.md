@@ -6,7 +6,7 @@ Este documento orienta uma pessoa ou IA responsável por colocar o novo site ins
 
 O domínio `infolinesystems.com.br` usa GitHub Pages, com publicação da raiz da branch `main` do repositório `Infoline-Sistemas/infolineLandingPage`. `CNAME` foi preservado. `_config.yml` exclui fontes, documentação, dependências e arquivos antigos do site da publicação. Não crie `.nojekyll` na raiz, pois ele desativa essas exclusões; o pacote isolado de `npm run package` pode utilizá-lo.
 
-A integração V4 deve permanecer em branch nova baseada na `main` até a aprovação da entrega. A política `politicadeprivacidade.html` continua acessível, com conteúdo e canonical da nova política. Preserve `charlotte-paes-privacidade.html` e `tattooflow/`, presentes na `main` para aplicativos publicados.
+A integração V4 deve permanecer em branch nova baseada na `main` até a aprovação da entrega. A política dos apps preserva seu texto e sua URL original, `politicadeprivacidade.html`. A política do site fica em `politica-de-privacidade.html`, com canonical própria. Preserve `charlotte-paes-privacidade.html` e `tattooflow/`, presentes na `main` para aplicativos publicados.
 
 O Web3Forms existente continua atendendo o formulário de demonstração. Não é necessário criar um endpoint próprio para preservar esse fluxo. IDs de métricas seguem vazios; cookies opcionais são controlados pelo banner e Consent Mode v2. Veja [a configuração específica e os testes](docs/11-INTEGRACAO-GITHUB-PAGES.md).
 
@@ -24,7 +24,7 @@ Esses três caminhos podem ser diferentes. Nunca inferir `PUBLIC_ROOT` a partir 
 
 ## 1. Objetivo e estado do projeto
 
-O site é estático e utiliza somente HTML, CSS e JavaScript no navegador. Não exige Node.js, banco de dados, CMS ou framework no servidor público. Node.js é necessário apenas no ambiente de manutenção para gerar novamente os 20 HTMLs, o `sitemap.xml` e o `robots.txt`.
+O site é estático e utiliza somente HTML, CSS e JavaScript no navegador. Não exige Node.js, banco de dados, CMS ou framework no servidor público. Node.js é necessário apenas no ambiente de manutenção para gerar novamente os 21 HTMLs, o `sitemap.xml` e o `robots.txt`.
 
 Páginas existentes:
 
@@ -33,7 +33,7 @@ Páginas existentes:
 - `pcpm.html`, `wms.html`, `compras.html` e `custos.html`;
 - `comercial.html`, `crm.html` e `ecommerce.html`;
 - `financeiro.html`, `contabilidade.html`, `controladoria.html`, `rh.html` e `gestao-processos.html`;
-- `integracao-whatsapp.html`, `solucoes.html`, `trabalhe-conosco.html` e `politica-de-privacidade.html`.
+- `integracao-whatsapp.html`, `solucoes.html`, `trabalhe-conosco.html`, `politica-de-privacidade.html` (site) e `politicadeprivacidade.html` (apps).
 
 ## 2. Regras obrigatórias para qualquer IA
 
@@ -265,7 +265,7 @@ Não inventar `.htaccess` ou configuração Nginx sem identificar o servidor rea
 
 ## 14. Checklist pós-publicação
 
-- [ ] Home e as 20 páginas respondem com HTTP 200 por HTTPS.
+- [ ] As 21 páginas geradas, incluindo a home e as duas políticas, respondem com HTTP 200 por HTTPS.
 - [ ] CSS, JavaScript, imagens e `assets/img/icons.svg` carregam.
 - [ ] Console sem erros relevantes.
 - [ ] Menu desktop/mobile, FAQ e componentes interativos funcionam.

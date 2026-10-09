@@ -14,6 +14,8 @@ export function orgSchema() {
     email: site.email,
     address: {
       '@type': 'PostalAddress',
+      streetAddress: site.address.streetAddress,
+      postalCode: site.address.postalCode,
       addressLocality: site.address.city,
       addressRegion: site.address.region,
       addressCountry: site.address.country,

@@ -285,7 +285,7 @@ export function renderHome() {
         <div class="contact-point"><span class="contact-point-ico">${icon('i-whatsapp', 'i')}</span><div><b>WhatsApp</b><a href="${waLink(site)}" target="_blank" rel="noopener" data-track="whatsapp_click" data-label="home_contact_whatsapp">${esc(site.whatsappDisplay)}</a></div></div>
         <div class="contact-point"><span class="contact-point-ico">${icon('i-phone', 'i')}</span><div><b>Telefone</b><a href="tel:${site.tel}">${esc(site.phoneDisplay)}</a></div></div>
         <div class="contact-point"><span class="contact-point-ico">${icon('i-mail', 'i')}</span><div><b>E-mail</b><a href="mailto:${site.email}">${esc(site.email)}</a></div></div>
-        <div class="contact-point"><span class="contact-point-ico">${icon('i-pin', 'i')}</span><div><b>Onde estamos</b><p>${esc(site.address.city)}/${esc(site.address.region)}, Brasil</p></div></div>
+        <div class="contact-point"><span class="contact-point-ico">${icon('i-pin', 'i')}</span><div><b>Onde estamos</b><a href="${site.mapsUrl}" target="_blank" rel="noopener">${esc(site.address.streetAddress)}<br>CEP ${esc(site.address.postalCode)} · ${esc(site.address.city)}/${esc(site.address.region)}, Brasil</a></div></div>
       </div>
     </div>
     <form class="contact-form reveal" id="form-contato" data-lead-form novalidate>

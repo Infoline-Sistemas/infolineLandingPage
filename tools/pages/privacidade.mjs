@@ -4,11 +4,11 @@ import { header, footer, breadcrumb } from '../layout.mjs';
 import { site } from '../content.mjs';
 
 export function renderPrivacidade() {
-  const title = 'Política de Privacidade | Infoline';
+  const title = 'Política de Privacidade do Site | Infoline';
   const description = 'Política de privacidade da Infoline: dados enviados nos formulários, cookies, preferências de estatísticas e publicidade e canais para exercer seus direitos.';
   const headHtml = head({ title, description, path: 'politica-de-privacidade.html', noindex: false });
 
-  const bc = breadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Política de Privacidade' }]);
+  const bc = breadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Privacidade do site' }]);
 
   const body = `
 ${header({ variant: 'internal' })}
@@ -17,7 +17,7 @@ ${bc}
   <section class="section" style="padding-bottom:0;">
     <div class="container" style="max-width:760px;">
       <p class="kicker">Privacidade</p>
-      <h1>Política de Privacidade</h1>
+      <h1>Política de Privacidade do Site</h1>
       <p class="lede">Conheça o uso dos dados enviados a este site, suas escolhas de cookies e os canais para exercer os direitos previstos na Lei Geral de Proteção de Dados (Lei nº 13.709/2018).</p>
     </div>
   </section>
@@ -26,6 +26,7 @@ ${bc}
       <div>
         <h2 style="font-size:22px;">1. Quem trata os seus dados</h2>
         <p class="body-text">Os dados coletados por este site são tratados pela ${esc(site.legalName)} ("Infoline"), controladora dos dados pessoais para os fins descritos nesta política. Em caso de dúvida, entre em contato pelo e-mail <a href="mailto:${site.email}" style="color:var(--blue); font-weight:700;">${esc(site.email)}</a> ou pelo telefone ${esc(site.phoneDisplay)}.</p>
+        <p class="body-text">Endereço: ${esc(site.address.streetAddress)}, CEP ${esc(site.address.postalCode)}, ${esc(site.address.city)}/${esc(site.address.region)}, Brasil.</p>
       </div>
       <div>
         <h2 style="font-size:22px;">2. Quais dados coletamos</h2>

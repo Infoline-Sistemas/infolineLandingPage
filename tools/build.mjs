@@ -17,6 +17,7 @@ import { renderModule } from './pages/module.mjs';
 import { renderSolucoes } from './pages/solucoes.mjs';
 import { renderTrabalhe } from './pages/trabalhe.mjs';
 import { renderPrivacidade } from './pages/privacidade.mjs';
+import { renderPrivacidadeApps } from './pages/privacidade-apps.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..'); // /home/claude/site
@@ -74,15 +75,12 @@ moduleOrder.forEach((key) => {
 pages.push(['solucoes.html', renderSolucoes()]);
 pages.push(['trabalhe-conosco.html', renderTrabalhe()]);
 pages.push(['politica-de-privacidade.html', renderPrivacidade()]);
+pages.push(['politicadeprivacidade.html', renderPrivacidadeApps()]);
 
 let totalBytes = 0;
 for (const [name, page] of pages) {
   totalBytes += write(name, page);
 }
-
-// A URL antiga continua funcionando no GitHub Pages, que não oferece 301.
-// O conteúdo e o canonical são os mesmos da política atual.
-write('politicadeprivacidade.html', renderPrivacidade());
 
 // ---------------------------------------------------------------------------
 // sitemap.xml

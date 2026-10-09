@@ -12,7 +12,7 @@ const pages = [
   'custos.html', 'comercial.html', 'crm.html', 'ecommerce.html', 'financeiro.html',
   'integracao-whatsapp.html', 'contabilidade.html', 'controladoria.html', 'rh.html',
   'gestao-processos.html', 'solucoes.html', 'trabalhe-conosco.html',
-  'politica-de-privacidade.html',
+  'politica-de-privacidade.html', 'politicadeprivacidade.html',
 ];
 const knownMarkupEvents = new Set(['cta_click', 'solution_portal_click', 'whatsapp_click']);
 const expectedRuntimeEvents = ['page_view', 'module_view', 'solution_view', 'navigation_click', 'form_start', 'form_submit', 'demo_request', 'generate_lead', 'lead_handoff'];

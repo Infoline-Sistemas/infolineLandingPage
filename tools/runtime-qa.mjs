@@ -65,6 +65,26 @@ try {
   }));
   console.log('Navegação e responsividade: 21 páginas em 1440, 1024 e 390px.');
 
+  const restored = await fixture();
+  await restored.page.goto(origin + '/politicadeprivacidade.html');
+  await restored.page.locator('[data-cookie-banner] [data-cookie-action="reject"]').click();
+  check((await restored.page.locator('h1').textContent()).includes('DOS APP INFOLINE'), 'URL original abre a política dos aplicativos');
+  check(await restored.page.locator('#politica h2').count() === 6, 'As seis seções da política dos apps foram preservadas');
+  await restored.page.screenshot({ path: join(output, 'apps-policy-1440.png') });
+  await restored.page.goto(origin + '/politica-de-privacidade.html');
+  check(await restored.page.locator('h1').textContent() === 'Política de Privacidade do Site', 'Política do site tem URL e título próprios');
+  await restored.page.goto(origin + '/index.html');
+  const address = restored.page.locator('#contato .contact-point').filter({ hasText: 'Onde estamos' });
+  check((await address.textContent()).includes('Avenida República Argentina, 2403, cj. 86') && (await address.textContent()).includes('80610-260'), 'Endereço completo restaurado no contato');
+  const maps = new URL(await address.locator('a').getAttribute('href'));
+  check(maps.protocol === 'https:' && maps.searchParams.get('query').includes('Avenida República Argentina 2403'), 'Mapa aponta para o endereço completo por HTTPS');
+  await address.scrollIntoViewIfNeeded();
+  await restored.page.screenshot({ path: join(output, 'contact-address-1440.png') });
+  await restored.page.setViewportSize({ width: 390, height: 900 });
+  await restored.page.locator('.footer-contact').scrollIntoViewIfNeeded();
+  await restored.page.screenshot({ path: join(output, 'footer-address-390.png') });
+  await restored.context.close();
+
   const tracking = await fixture({ gtmId: 'GTM-TEST123', metaPixelId: '123456789' });
   await tracking.page.goto(origin + '/index.html?utm_source=qa&gclid=ad-test');
   let cloudflareRequests = 0;
