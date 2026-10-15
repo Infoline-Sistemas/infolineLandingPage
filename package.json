@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "npx": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
+    "build": "node tools/build.mjs",
+    "check": "node tools/check.mjs",
+    "dev": "node tools/serve.mjs",
+    "package": "npm run build && npm run check && node tools/package-site.mjs"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
