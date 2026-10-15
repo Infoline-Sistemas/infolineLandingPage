@@ -26,6 +26,10 @@ A CSP em `tools/head.mjs` permite scripts próprios e provedores Google/Meta con
 
 ## Ativação pelo responsável
 
+O Google Analytics 4 está configurado diretamente em `assets/js/config.js` com o ID `G-VX9WVZQ0E9`, fornecido em 15/10/2026. A integração existente carrega `gtag.js` somente com autorização para estatísticas, envia uma única visualização inicial e encaminha os eventos do site para esse ID. GTM não é necessário para esta configuração direta. Após a publicação, conferir a chegada dos eventos no relatório em tempo real do Analytics.
+
+Os passos abaixo se aplicam à futura configuração via GTM e Google Ads:
+
 1. Criar ou selecionar contas empresariais do Tag Manager, Analytics e Ads.
 2. Colocar o ID público `GTM-...` em `assets/js/config.js`, mantendo `ga4Id` vazio se GA4 for carregado pelo GTM.
 3. Configurar Consent Mode no container, preferencialmente com template que use `setDefaultConsentState` e `updateConsentState`. O site fornece o evento `infoline_consent_update` e os quatro estados no dataLayer. As tags precisam verificar a finalidade correspondente, inclusive as que não têm verificações nativas de consentimento.
@@ -37,7 +41,7 @@ A CSP em `tools/head.mjs` permite scripts próprios e provedores Google/Meta con
 9. Conferir a CSP ao adicionar tags ou modos de depuração. Não liberar origens arbitrárias nem `unsafe-eval` para contornar bloqueios.
 10. Criar e ativar campanhas no painel Ads após definir conta, conversões, segmentação e orçamento.
 
-O usuário confirmou que configurará as contas e enviará o GTM posteriormente. Nenhuma campanha foi criada nem ativada nesta integração.
+GTM, Google Ads e Meta seguem sem identificadores configurados. Nenhuma campanha foi criada nem ativada nesta integração. Caso GA4 passe a ser carregado pelo GTM, remover o ID direto de `ga4Id` para manter uma única origem de configuração.
 
 Referências: [Consent Mode](https://developers.google.com/tag-platform/security/guides/consent), [GTM e CSP](https://developers.google.com/tag-platform/security/guides/csp), [Cloudflare Web Analytics](https://developers.cloudflare.com/web-analytics/get-started/) e [guia de cookies da ANPD](https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_orientativo_cookies_e_protecao_de_dados_pessoais).
 

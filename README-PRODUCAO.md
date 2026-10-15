@@ -8,7 +8,7 @@ O domínio `infolinesystems.com.br` usa GitHub Pages, com publicação da raiz d
 
 A integração V4 deve permanecer em branch nova baseada na `main` até a aprovação da entrega. A política dos apps preserva seu texto e sua URL original, `politicadeprivacidade.html`. A política do site fica em `politica-de-privacidade.html`, com canonical própria. Preserve `charlotte-paes-privacidade.html` e `tattooflow/`, presentes na `main` para aplicativos publicados.
 
-O Web3Forms existente continua atendendo o formulário de demonstração. Não é necessário criar um endpoint próprio para preservar esse fluxo. IDs de métricas seguem vazios; cookies opcionais são controlados pelo banner e Consent Mode v2. Veja [a configuração específica e os testes](docs/11-INTEGRACAO-GITHUB-PAGES.md).
+O Web3Forms existente continua atendendo o formulário de demonstração. Não é necessário criar um endpoint próprio para preservar esse fluxo. O GA4 usa o ID `G-VX9WVZQ0E9`, fornecido pelo responsável, e só carrega com autorização para estatísticas. GTM, Google Ads e Meta seguem sem identificadores configurados. Cookies opcionais são controlados pelo banner e Consent Mode v2. Veja [a configuração específica e os testes](docs/11-INTEGRACAO-GITHUB-PAGES.md).
 
 > Este guia não presume nenhum caminho absoluto. O diretório usado no desenvolvimento original não é o caminho do servidor de produção.
 >
@@ -112,7 +112,7 @@ https://erp.infoline.app.br/InfolineV3/#/login
 ```javascript
 window.INFOLINE_CONFIG = {
   gtmId: '',
-  ga4Id: '',
+  ga4Id: 'G-VX9WVZQ0E9',
   googleAdsId: '',
   metaPixelId: '',
   leadEndpoint: '',
@@ -121,9 +121,9 @@ window.INFOLINE_CONFIG = {
 };
 ```
 
-- IDs vazios significam que nenhum dado é enviado a plataformas externas.
-- Recomenda-se preencher `gtmId` e gerenciar GA4 e Google Ads pelo Google Tag Manager.
-- No GTM, configurar GA4, Conversion Linker e conversões relevantes.
+- Um ID vazio desativa apenas a integração correspondente. O GA4 direto já está configurado e depende da autorização para estatísticas.
+- GTM é opcional para o GA4 direto; pode ser configurado futuramente para gerenciar tags e conversões.
+- Se futuramente usar GTM para carregar GA4, manter `ga4Id` vazio e configurar GA4, Conversion Linker e conversões relevantes no container.
 - `googleAdsId` está reservado, mas não inicializa Google Ads diretamente no código atual.
 - Google AdSense não faz parte do projeto e não deve ser instalado sem decisão comercial expressa.
 - Não ativar tags de marketing antes de definir consentimento, Consent Mode v2 e atualizar a política de privacidade.

@@ -86,6 +86,8 @@
     } else if (c.analytics && /^G-[A-Z0-9]+$/.test(cfg.ga4Id || '') && !loaded.ga) {
       loaded.ga = true;
       directGa = true;
+      // A primeira medição do GA4 também ocorre se estatísticas forem liberadas depois.
+      pageTracked = false;
       window.gtag('js', new Date());
       window.gtag('config', cfg.ga4Id, { send_page_view: false, page_location: location.origin + location.pathname, allow_google_signals: c.marketing, allow_ad_personalization_signals: c.marketing });
       injectScript('https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(cfg.ga4Id));

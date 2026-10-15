@@ -1,13 +1,13 @@
 /**
  * assets/js/config.js
- * Ponto único de configuração. Preencha os IDs reais antes de publicar.
- * Nenhum valor aqui é um ID válido — são placeholders vazios propositalmente.
+ * Ponto único de configuração. IDs vazios desativam a integração correspondente.
+ * GA4 configurado; estatísticas dependem do consentimento do visitante.
  */
 window.INFOLINE_CONFIG = {
   // Google Tag Manager — ex.: "GTM-XXXXXXX"
   gtmId: '',
   // GA4 (caso não use GTM para carregá-lo) — ex.: "G-XXXXXXXXXX"
-  ga4Id: '',
+  ga4Id: 'G-VX9WVZQ0E9',
   // Google Ads (conversão) — ex.: "AW-XXXXXXXXX"
   googleAdsId: '',
   // Meta Pixel — ex.: "000000000000000"

@@ -142,6 +142,24 @@ try {
   check(value.scripts.some((url) => url.includes('gtag/js')), 'GA4 direto carrega após autorização');
   check(value.events.some((event) => event[0] === 'event' && event[1] === 'page_view'), 'GA4 direto recebe eventos');
   await ga.context.close();
+
+  const laterGa = await fixture({ ga4Id: 'G-TEST123' });
+  await laterGa.page.goto(origin + '/pcpm.html');
+  await laterGa.page.locator('[data-cookie-banner] [data-cookie-settings]').click();
+  await laterGa.page.locator('[data-cookie-marketing]').check();
+  await laterGa.page.locator('[data-cookie-action="save"]').click();
+  check(laterGa.external.length === 0, 'Publicidade isolada não carrega GA4 direto');
+  await laterGa.page.locator('.footer [data-cookie-settings]').click();
+  await laterGa.page.locator('[data-cookie-analytics]').check();
+  await laterGa.page.locator('[data-cookie-action="save"]').click();
+  value = await state(laterGa.page);
+  check(value.events.filter((event) => event[0] === 'event' && event[1] === 'page_view').length === 1, 'GA4 registra uma visualização ao autorizar estatísticas posteriormente');
+  check(value.events.filter((event) => event[0] === 'event' && event[1] === 'module_view').length === 1, 'GA4 registra o módulo ao autorizar estatísticas posteriormente');
+  await laterGa.page.locator('.footer [data-cookie-settings]').click();
+  await laterGa.page.locator('[data-cookie-action="save"]').click();
+  value = await state(laterGa.page);
+  check(value.events.filter((event) => event[0] === 'event' && event[1] === 'page_view').length === 1, 'Salvar preferências novamente não duplica a visualização no GA4');
+  await laterGa.context.close();
   console.log('Consentimento: recusa, categorias, persistência, expiração, revogação, armazenamento bloqueado e GA4/GTM.');
 
   // Interceptação evita enviar leads reais ou abrir conversas durante o QA.
