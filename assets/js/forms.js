@@ -128,7 +128,10 @@
           } else {
             setStatus(form, 'ok', 'Recebemos sua solicitação. Nossa equipe entra em contato em breve.');
             form.reset();
-            if (window.infolineTrack) window.infolineTrack('generate_lead', { form_id: form.id || 'contato' });
+            if (window.infolineTrack) {
+              window.infolineTrack('generate_lead', { form_id: form.id || 'contato' });
+              window.infolineTrack('infoline_generate_lead', { form_id: form.id || 'contato' });
+            }
           }
         })
         .catch(function () {

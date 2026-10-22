@@ -129,7 +129,10 @@
   document.addEventListener('click', function (e) {
     var el = e.target.closest('[data-track]');
     if (!el) return;
-    pushEvent(el.getAttribute('data-track'), { label: el.getAttribute('data-label') || el.textContent.trim().slice(0, 80), href: el.getAttribute('href') || undefined });
+    var name = el.getAttribute('data-track');
+    var data = { label: el.getAttribute('data-label') || el.textContent.trim().slice(0, 80), href: el.getAttribute('href') || undefined };
+    pushEvent(name, data);
+    if (name === 'whatsapp_click') pushEvent('infoline_whatsapp_click', data);
   }, { passive: true });
   document.addEventListener('click', function (e) {
     var el = e.target.closest('[data-nav-link], nav a');
