@@ -22,8 +22,8 @@ const connected = [
 
 export function renderIndustry() {
   const headHtml = head({
-    title: 'ERP para Indústria: Produção, Estoque e Custos | Infoline',
-    description: 'ERP para indústrias que conecta planejamento, materiais, produção, estoque, compras e custos para dar mais controle à rotina da fábrica.',
+    title: 'Sistema de Gestão para Indústria | ERP Infoline',
+    description: 'Sistema de gestão para indústria com PCPM, MRP, produção, estoque, compras e custos integrados. Planeje materiais e acompanhe ordens no ERP Infoline.',
     path: 'erp-para-industria.html',
     schemas: [orgSchema(), faqSchema(industryFaq)],
   });
@@ -39,7 +39,7 @@ export function renderIndustry() {
   <div class="container module-nav-inner">
     <span>Gestão Industrial</span>
     <div>
-      <a href="#visao-geral">Visão geral</a><a href="#como-funciona">Como funciona</a><a href="#recursos">Recursos</a><a href="#integracoes">Integrações</a><a href="#faq">FAQ</a>
+      <a href="#visao-geral">Visão geral</a><a href="#como-funciona">Como funciona</a><a href="#recursos">Recursos</a><a href="#integracoes">Integrações</a><a href="#guia-escolha">Como escolher</a><a href="#faq">FAQ</a>
     </div>
   </div>
 </nav>`;
@@ -50,8 +50,8 @@ export function renderIndustry() {
     <div class="reveal">
       <span class="mod-hero-icon">${icon('i-pcpm', 'i i-lg')}</span>
       <p class="kicker">ERP para indústrias</p>
-      <h1>Tenha sua fábrica sob controle, do planejamento ao produto acabado.</h1>
-      <p class="lede">Planeje o que produzir, antecipe materiais e acompanhe a execução da fábrica sem depender de planilhas e informações espalhadas.</p>
+      <h1>Sistema de gestão para indústria: planeje e acompanhe toda a produção.</h1>
+      <p class="lede">O ERP Infoline conecta planejamento, materiais, chão de fábrica, estoque, compras e custos. Antecipe necessidades e acompanhe ordens de produção em uma só plataforma.</p>
       <div class="mod-hero-cta">
         <a class="button button-primary" href="index.html#contato" data-track="cta_click" data-label="industria_hero_demo">Agendar uma demonstração</a>
         <a class="button button-outline" href="#visao-geral">Conhecer a gestão industrial</a>
@@ -129,6 +129,12 @@ export function renderIndustry() {
   <div class="related-grid industry-related reveal">${connected.map(([key, title, text]) => { const m = modules[key]; return `<a class="related-card" href="${m.slug}.html"><span class="related-card-ico">${icon(m.icon, 'i')}</span><div><b>${esc(title)}</b><span>${esc(text)}</span></div></a>`; }).join('')}</div>
 </div></section>`;
 
+  const guideSection = `
+<section class="section industry-guide-promo" id="guia-escolha"><div class="container industry-guide-promo-inner">
+  <div class="reveal"><p class="kicker">Guia de compra</p><h2>Como escolher um sistema de gestão para indústria?</h2><p class="lede">Compare o fluxo completo, da demanda à produção, e prepare uma demonstração com dados reais da sua fábrica. Nosso guia reúne critérios, perguntas e um roteiro de avaliação.</p></div>
+  <a class="button button-primary" href="como-escolher-sistema-gestao-industria.html" data-track="cta_click" data-label="industria_guide">Ler o guia de escolha${icon('i-arrow-right', 'i')}</a>
+</div></section>`;
+
   const faqSection = `
 <section class="section" id="faq"><div class="container" style="max-width:900px;">
   <div class="section-head reveal" style="display:block;"><p class="kicker">Perguntas frequentes</p><h2>Sobre o ERP para indústrias</h2></div>
@@ -142,7 +148,7 @@ export function renderIndustry() {
   <div class="cta-banner-actions"><a class="button button-light" href="index.html#contato" data-track="cta_click" data-label="industria_bottom_demo">Agendar uma demonstração</a></div>
 </div></div></section>`;
 
-  const body = `${header({ current: 'erp-para-industria', variant: 'internal' })}${bc}<main id="conteudo">${heroSection}${localNav}${overviewSection}${processSection}${screenSection}${capabilitiesSection}${integrationsSection}${faqSection}${ctaSection}</main>${footer()}`;
+  const body = `${header({ current: 'erp-para-industria', variant: 'internal' })}${bc}<main id="conteudo">${heroSection}${localNav}${overviewSection}${processSection}${screenSection}${capabilitiesSection}${integrationsSection}${guideSection}${faqSection}${ctaSection}</main>${footer()}`;
 
   return { headHtml, body, styles: ['module.css', 'industry.css'], pageType: 'solution', solutionGroup: 'industria' };
 }

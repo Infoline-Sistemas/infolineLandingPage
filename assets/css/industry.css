@@ -64,6 +64,11 @@
 .industry-related .related-card{ align-items:flex-start; padding:20px 18px; }
 .industry-related .related-card span{ line-height:1.45; }
 .industry-related .related-card-ico{ margin-top:1px; }
+.industry-guide-promo{ background:linear-gradient(135deg,#edf4fe,#f8fbff); }
+.industry-guide-promo-inner{ display:flex; align-items:center; justify-content:space-between; gap:32px; }
+.industry-guide-promo h2{ max-width:20ch; margin-bottom:15px; }
+.industry-guide-promo .lede{ max-width:60ch; }
+.industry-guide-promo .button{ flex:none; }
 .industry-final{ padding-top:0; }
 
 @media (max-width:1180px){
@@ -79,6 +84,8 @@
   .industry-capability h3{ grid-column:1/-1; }
 }
 @media (max-width:720px){
+  .industry-guide-promo-inner{ display:block; }
+  .industry-guide-promo .button{ margin-top:26px; }
   .sector-hero h1{
     max-width:none;
     font-size:clamp(31px,9vw,42px);

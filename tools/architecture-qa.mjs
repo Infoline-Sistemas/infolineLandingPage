@@ -11,7 +11,7 @@ const expectedRenderers = [
   'ecommerce', 'contabilidade', 'controladoria', 'rh', 'processos', 'whatsapp',
 ];
 const pages = [
-  'index.html', 'erp-para-industria.html', 'erp-para-importadores.html',
+  'index.html', 'erp-para-industria.html', 'como-escolher-sistema-gestao-industria.html', 'erp-para-importadores.html',
   'erp-para-atacado-distribuicao.html', 'pcpm.html', 'wms.html', 'compras.html',
   'custos.html', 'comercial.html', 'crm.html', 'ecommerce.html', 'financeiro.html',
   'integracao-whatsapp.html', 'contabilidade.html', 'controladoria.html', 'rh.html',

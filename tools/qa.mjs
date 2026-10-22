@@ -7,7 +7,7 @@ const preservedPages = new Set(['charlotte-paes-privacidade.html']);
 const pages = fs.readdirSync(root).filter((name) => name.endsWith('.html') && !preservedPages.has(name)).sort();
 const errors = [];
 const expectedPages = [
-  'index.html', 'erp-para-industria.html', 'erp-para-importadores.html',
+  'index.html', 'erp-para-industria.html', 'como-escolher-sistema-gestao-industria.html', 'erp-para-importadores.html',
   'erp-para-atacado-distribuicao.html', 'pcpm.html', 'wms.html', 'compras.html',
   'custos.html', 'comercial.html', 'crm.html', 'ecommerce.html', 'financeiro.html',
   'integracao-whatsapp.html', 'contabilidade.html', 'controladoria.html', 'rh.html',

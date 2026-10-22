@@ -12,6 +12,7 @@ import { setBase } from './lib.mjs';
 import { site, modules, moduleOrder } from './content.mjs';
 import { renderHome } from './pages/home.mjs';
 import { renderIndustry } from './pages/industry.mjs';
+import { renderIndustryGuide } from './pages/industry-guide.mjs';
 import { renderImporters, renderWholesale } from './pages/sectors.mjs';
 import { renderModule } from './pages/module.mjs';
 import { renderSolucoes } from './pages/solucoes.mjs';
@@ -64,6 +65,7 @@ pages.push(['index.html', renderHome()]);
 
 // Solução comercial para indústrias
 pages.push(['erp-para-industria.html', renderIndustry()]);
+pages.push(['como-escolher-sistema-gestao-industria.html', renderIndustryGuide()]);
 pages.push(['erp-para-importadores.html', renderImporters()]);
 pages.push(['erp-para-atacado-distribuicao.html', renderWholesale()]);
 
@@ -92,7 +94,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url>
     <loc>${site.url}/${u === 'index.html' ? '' : u}</loc>
-    <lastmod>${u === 'index.html' ? site.homeSitemapLastmod : site.sitemapLastmod}</lastmod>
+    <lastmod>${u === 'index.html' ? site.homeSitemapLastmod : site.pageSitemapLastmod?.[u] || site.sitemapLastmod}</lastmod>
     <changefreq>${u === 'index.html' ? 'weekly' : 'monthly'}</changefreq>
     <priority>${u === 'index.html' ? '1.0' : u.startsWith('politica') ? '0.2' : '0.8'}</priority>
   </url>`).join('\n')}
