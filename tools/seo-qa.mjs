@@ -194,7 +194,7 @@ const sitemapUrls = Array.from(sitemap.matchAll(/<loc>(.*?)<\/loc>/g), (match) =
 const sitemapDates = Array.from(sitemap.matchAll(/<lastmod>(.*?)<\/lastmod>/g), (match) => match[1]);
 const expectedUrls = pages.map(expectedUrl);
 if (JSON.stringify(sitemapUrls) !== JSON.stringify(expectedUrls)) failures.push(`sitemap.xml não corresponde às ${pages.length} canonicals na ordem do build`);
-if (sitemapDates.length !== pages.length || sitemapDates.some((date) => date !== site.sitemapLastmod || !/^\d{4}-\d{2}-\d{2}$/.test(date))) failures.push('sitemap.xml possui lastmod ausente, inválido ou desatualizado');
+if (sitemapDates.length !== pages.length || sitemapDates.some((date, index) => date !== (index === 0 ? site.homeSitemapLastmod : site.sitemapLastmod) || !/^\d{4}-\d{2}-\d{2}$/.test(date))) failures.push('sitemap.xml possui lastmod ausente, inválido ou desatualizado');
 const robots = readFileSync(join(ROOT, 'robots.txt'), 'utf8');
 if (!/^User-agent: \*$/m.test(robots) || !/^Allow: \/$/m.test(robots) || !new RegExp(`^Sitemap: ${site.url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\/sitemap\\.xml$`, 'm').test(robots)) failures.push('robots.txt inconsistente');
 

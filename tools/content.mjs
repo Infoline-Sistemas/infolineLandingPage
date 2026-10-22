@@ -32,6 +32,7 @@ export const site = {
   ],
   buildDate: '2026-10-09',
   sitemapLastmod: '2026-10-09',
+  homeSitemapLastmod: '2026-10-22',
   year: 2026,
 };
 

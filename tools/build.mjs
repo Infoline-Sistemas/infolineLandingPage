@@ -4,7 +4,7 @@
  * Gera o site estático em HTML/CSS/JS puro a partir dos templates em tools/pages.
  * Uso: node tools/build.mjs
  */
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -21,6 +21,7 @@ import { renderPrivacidadeApps } from './pages/privacidade-apps.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..'); // /home/claude/site
+const iconSprite = readFileSync(join(ROOT, 'assets/img/icons.svg'), 'utf8');
 
 setBase(''); // todas as páginas vivem na raiz do domínio
 
@@ -38,6 +39,7 @@ ${headHtml}
 ${styles.map((name) => `<link rel="stylesheet" href="assets/css/${name}">`).join('\n')}
 </head>
 <body ${bodyAttrs}>
+${iconSprite}
 ${body}
 <script src="assets/js/config.js"></script>
 <script src="assets/js/consent.js" defer></script>
@@ -90,7 +92,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url>
     <loc>${site.url}/${u === 'index.html' ? '' : u}</loc>
-    <lastmod>${site.sitemapLastmod}</lastmod>
+    <lastmod>${u === 'index.html' ? site.homeSitemapLastmod : site.sitemapLastmod}</lastmod>
     <changefreq>${u === 'index.html' ? 'weekly' : 'monthly'}</changefreq>
     <priority>${u === 'index.html' ? '1.0' : u.startsWith('politica') ? '0.2' : '0.8'}</priority>
   </url>`).join('\n')}

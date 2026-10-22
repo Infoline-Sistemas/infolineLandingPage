@@ -7,10 +7,10 @@ export const esc = (s) => String(s ?? '')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 export const icon = (id, cls = 'i') =>
-  `<svg class="${cls}" aria-hidden="true" focusable="false"><use href="${BASE}assets/img/icons.svg#${id}"></use></svg>`;
+  `<svg class="${cls}" aria-hidden="true" focusable="false"><use href="#${id}"></use></svg>`;
 
 export const logoMark = (cls = 'brand-mark') =>
-  `<svg class="${cls}" width="40" height="40" viewBox="0 0 43 43" aria-hidden="true" focusable="false"><use href="${BASE}assets/img/icons.svg#logo-mark"></use></svg>`;
+  `<svg class="${cls}" width="40" height="40" viewBox="0 0 43 43" aria-hidden="true" focusable="false"><use href="#logo-mark"></use></svg>`;
 
 /**
  * <picture> com AVIF + WebP, srcset/sizes e dimensões explícitas (evita CLS).

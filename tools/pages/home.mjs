@@ -23,8 +23,8 @@ const ecosystemAreas = [
 ];
 
 export function renderHome() {
-  const title = 'Infoline | ERP Online Integrado para Indústria e Gestão Empresarial';
-  const description = 'ERP online integrado da Infoline para indústrias, importadores, atacadistas e empresas que precisam conectar toda a operação. Atendimento em todo o Brasil.';
+  const title = 'Sistema de Gestão Empresarial em Curitiba | ERP Infoline';
+  const description = 'Sistema de gestão empresarial em Curitiba: o ERP online da Infoline integra produção, estoque, compras, vendas e financeiro. Atendimento em todo o Brasil.';
 
   const headHtml = head({
     title, description, path: '',
@@ -39,8 +39,8 @@ export function renderHome() {
   <div class="hero-inner">
     <div class="hero-copy">
       <span class="hero-badge">${icon('i-grid', 'i i-sm')}ERP para indústrias, importadores e atacadistas</span>
-      <h1>Da fábrica ao financeiro, <em>tudo conectado.</em></h1>
-      <p class="lede">ERP online que integra produção, estoque, compras, vendas, financeiro, fiscal e pessoas em uma única plataforma web — para você decidir com a operação inteira à vista, não em módulos isolados.</p>
+      <h1>Sistema ERP em Curitiba: <em>tudo conectado.</em></h1>
+      <p class="lede">Com sede em Curitiba, a Infoline oferece um sistema de gestão empresarial (ERP online) que integra produção, estoque, compras, vendas, financeiro, fiscal e pessoas em uma única plataforma web.</p>
       <div class="hero-cta">
         <a class="button button-primary" href="#contato" data-track="cta_click" data-label="hero_demo">Agendar uma demonstração</a>
         <a class="button button-ghost-dark" href="#solucoes">Explorar soluções</a>
@@ -242,7 +242,7 @@ export function renderHome() {
     <div class="reveal">
       <span class="about-badge"><b>${site.since}</b><span>Desde ${site.since}</span></span>
       <h2>Experiência para entender o negócio. Tecnologia para fazê-lo evoluir.</h2>
-      <p class="body-text">Desde ${site.since}, a Infoline desenvolve soluções de software para empresas em todo o Brasil. O ERP integra as áreas do negócio em uma plataforma web, conectando operação, gestão e decisões.</p>
+      <p class="body-text">Desde ${site.since}, a Infoline desenvolve soluções de software para empresas em todo o Brasil. Com sede em Curitiba, oferece um ERP que integra as áreas do negócio em uma plataforma web, conectando operação, gestão e decisões.</p>
       <div class="hero-cta" style="margin-top:24px;">
         <a class="button button-outline" href="trabalhe-conosco.html">Trabalhe conosco</a>
       </div>

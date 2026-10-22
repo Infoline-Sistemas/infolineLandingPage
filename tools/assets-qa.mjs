@@ -45,6 +45,8 @@ const spriteIds = new Set(Array.from(sprite.matchAll(/<symbol\b[^>]*id="([^"]+)"
 
 for (const page of pages) {
   const html = readFileSync(join(ROOT, page), 'utf8');
+  const inlineIds = new Set(Array.from(html.matchAll(/<symbol\b[^>]*id="([^"]+)"/g), (match) => match[1]));
+  if (inlineIds.size !== spriteIds.size || [...spriteIds].some((id) => !inlineIds.has(id))) failures.push(`${page}: sprite inline incompleto`);
   const stylesheetRefs = [];
   const scriptRefs = [];
   const tags = Array.from(html.matchAll(/<[a-z][^>]*>/gi), (match) => ({ raw: match[0], attrs: attributes(match[0]) }));
@@ -63,7 +65,7 @@ for (const page of pages) {
     if (/^<use\b/i.test(tag.raw) && tag.attrs.href) {
       const [file, id] = tag.attrs.href.split('#');
       verify(file, page);
-      if (file.endsWith('icons.svg') && (!id || !spriteIds.has(id))) failures.push(`${page}: símbolo inexistente no sprite: ${tag.attrs.href}`);
+      if (file || !id || !inlineIds.has(id)) failures.push(`${page}: ícone sem símbolo inline: ${tag.attrs.href}`);
     }
   }
   const duplicateStyles = stylesheetRefs.filter((ref, index) => stylesheetRefs.indexOf(ref) !== index);
