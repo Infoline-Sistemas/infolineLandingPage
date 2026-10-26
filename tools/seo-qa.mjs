@@ -143,7 +143,7 @@ for (const page of pages) {
   }
 
   for (const software of schemas.filter((schema) => schema['@type'] === 'SoftwareApplication')) {
-    if (software.name !== 'Infoline ERP' || software.applicationCategory !== 'BusinessApplication' || software.operatingSystem !== 'Web') pageFailures.push('SoftwareApplication inconsistente');
+    if (software.name !== 'Infoline V3.1' || software.applicationCategory !== 'BusinessApplication' || software.operatingSystem !== 'Web') pageFailures.push('SoftwareApplication inconsistente');
     if (['offers', 'aggregateRating', 'review', 'softwareVersion'].some((key) => key in software)) pageFailures.push('SoftwareApplication contém propriedade comercial não comprovada');
   }
 

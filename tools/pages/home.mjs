@@ -23,8 +23,8 @@ const ecosystemAreas = [
 ];
 
 export function renderHome() {
-  const title = 'Sistema de Gestão Empresarial em Curitiba | ERP Infoline';
-  const description = 'Sistema de gestão empresarial em Curitiba: o ERP online da Infoline integra produção, estoque, compras, vendas e financeiro. Atendimento em todo o Brasil.';
+  const title = 'ERP Online para Gestão Empresarial | Infoline V3.1';
+  const description = 'O Infoline V3.1 é um ERP online que integra produção, estoque, compras, vendas, financeiro, fiscal e pessoas. Conheça a plataforma e agende uma demonstração.';
 
   const headHtml = head({
     title, description, path: '',
@@ -38,9 +38,9 @@ export function renderHome() {
   <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-copy">
-      <span class="hero-badge">${icon('i-grid', 'i i-sm')}ERP para indústrias, importadores e atacadistas</span>
-      <h1>Sistema ERP em Curitiba: <em>tudo conectado.</em></h1>
-      <p class="lede">Com sede em Curitiba, a Infoline oferece um sistema de gestão empresarial (ERP online) que integra produção, estoque, compras, vendas, financeiro, fiscal e pessoas em uma única plataforma web.</p>
+      <span class="hero-badge">${icon('i-grid', 'i i-sm')}Infoline V3.1 · ERP online</span>
+      <h1>Um ERP para conectar <em>toda a sua operação.</em></h1>
+      <p class="lede">O Infoline V3.1 integra produção, estoque, compras, vendas, financeiro, fiscal e pessoas em uma plataforma web. Desenvolvido em Curitiba, atende empresas em todo o Brasil.</p>
       <div class="hero-cta">
         <a class="button button-primary" href="#contato" data-track="cta_click" data-label="hero_demo">Agendar uma demonstração</a>
         <a class="button button-ghost-dark" href="#solucoes">Explorar soluções</a>
@@ -124,6 +124,7 @@ export function renderHome() {
         </span>
       </a>
     </div>
+    <p class="reality-guide reveal">Vai comparar sistemas para sua fábrica? <a class="text-link" href="como-escolher-sistema-gestao-industria.html">Leia o guia para escolher um sistema de gestão industrial${icon('i-arrow-right', 'i')}</a></p>
   </div>
 </section>`;
 
@@ -149,6 +150,7 @@ export function renderHome() {
         <span class="need-card-link">${esc(need.cta)}${icon('i-arrow-right', 'i')}</span>
       </a>`).join('')}
     </div>
+    <p class="need-related">Também precisa conectar <a href="custos.html">custos e margem</a>, <a href="controladoria.html">indicadores de gestão</a> ou <a href="gestao-processos.html">processos entre equipes</a>? Conheça essas áreas do ERP.</p>
     <div style="text-align:center; margin-top:32px;">
       <a class="text-link" href="solucoes.html">${icon('i-grid', 'i')}Ver todas as necessidades${icon('i-arrow-right', 'i')}</a>
     </div>
@@ -162,8 +164,8 @@ export function renderHome() {
     <div class="section-head reveal">
       <div class="section-head-text">
         <p class="kicker">Veja o Infoline em ação</p>
-        <h2>Um fluxo real, <span>do início ao fim.</span></h2>
-        <p class="lede">Representações baseadas nas telas do sistema. Escolha um fluxo e acompanhe cada etapa.</p>
+        <h2>Acompanhe um fluxo <span>do início ao fim.</span></h2>
+        <p class="lede">As visualizações são ilustrativas e baseadas nas telas do sistema. Escolha um fluxo para entender as etapas e peça para vê-lo com dados da sua operação na demonstração.</p>
       </div>
     </div>
     <div class="demo-shell reveal" data-demo>

@@ -32,10 +32,11 @@ export const site = {
   ],
   buildDate: '2026-10-09',
   sitemapLastmod: '2026-10-09',
-  homeSitemapLastmod: '2026-10-22',
+  homeSitemapLastmod: '2026-10-26',
   pageSitemapLastmod: {
     'erp-para-industria.html': '2026-10-22',
     'como-escolher-sistema-gestao-industria.html': '2026-10-22',
+    'solucoes.html': '2026-10-26',
   },
   year: 2026,
 };

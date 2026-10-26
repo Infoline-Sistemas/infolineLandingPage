@@ -29,7 +29,7 @@ export function softwareSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'Infoline ERP',
+    name: 'Infoline V3.1',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
     provider: { '@type': 'Organization', name: site.legalName, url: `${site.url}/` },

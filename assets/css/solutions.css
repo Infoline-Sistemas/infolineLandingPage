@@ -6,6 +6,7 @@
 .solutions-jump{ display:flex; flex-wrap:wrap; gap:9px; margin-top:28px; }
 .solutions-jump a{ padding:10px 15px; border:1px solid #cddbee; border-radius:999px; color:var(--blue); background:rgba(255,255,255,.72); font-size:13px; font-weight:800; transition:transform var(--dur) var(--ease),border-color var(--dur) var(--ease),background var(--dur) var(--ease); }
 .solutions-jump a:hover{ transform:translateY(-2px); border-color:#87afe5; background:#fff; }
+.solutions-preview-note{ margin-top:20px; color:var(--slate); font-size:12px; line-height:1.5; }
 .solutions-map{ position:relative; min-height:420px; display:grid; grid-template-rows:auto 1fr auto; overflow:hidden; border:1px solid rgba(97,159,236,.36); border-radius:32px; color:#fff; background:radial-gradient(circle at 50% 43%,rgba(32,120,255,.3),transparent 34%),linear-gradient(145deg,#0d315f 0%,#071c3c 54%,#05152e 100%); box-shadow:0 30px 70px rgba(10,48,101,.22); isolation:isolate; }
 .solutions-map::before{ content:""; position:absolute; z-index:-1; inset:0; opacity:.28; background-image:linear-gradient(rgba(118,178,247,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(118,178,247,.12) 1px,transparent 1px); background-size:38px 38px; -webkit-mask-image:linear-gradient(to bottom,transparent,black 20%,black 82%,transparent); mask-image:linear-gradient(to bottom,transparent,black 20%,black 82%,transparent); }
 .solutions-map-head,.solutions-map-foot{ position:relative; z-index:4; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:17px 20px; }
