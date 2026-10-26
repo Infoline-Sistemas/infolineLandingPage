@@ -2,7 +2,6 @@
 .guide-hero-inner{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:clamp(32px,6vw,90px);align-items:center}
 .guide-hero h1{max-width:17ch;font-size:clamp(38px,4.3vw,64px)}
 .guide-hero .lede{margin-top:22px;max-width:62ch}
-.guide-meta{margin-top:24px;color:var(--slate);font-size:13px;font-weight:600}
 .guide-summary{display:grid;gap:7px;padding:24px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow-sm)}
 .guide-summary strong{margin-bottom:8px;color:var(--ink)}
 .guide-summary a{padding:8px 0;border-top:1px solid var(--line-2);color:var(--blue);font-size:14px;font-weight:700}
