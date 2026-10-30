@@ -169,6 +169,7 @@ export function footer() {
         <li><a href="${B()}index.html#contato">Fale com a Infoline</a></li>
         <li><a href="${B()}politica-de-privacidade.html">Privacidade do site</a></li>
         <li><a href="${B()}politicadeprivacidade.html">Privacidade dos apps</a></li>
+        <li><a href="${B()}infoline-privacidade.html">Privacidade do app Infoline</a></li>
         <li><button type="button" class="cookie-settings-link" data-cookie-settings>Preferências de cookies</button></li>
       </ul>
     </nav>

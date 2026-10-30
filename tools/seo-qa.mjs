@@ -11,6 +11,7 @@ const pages = [
   'integracao-whatsapp.html', 'contabilidade.html', 'controladoria.html', 'rh.html',
   'gestao-processos.html', 'solucoes.html', 'trabalhe-conosco.html',
   'politica-de-privacidade.html', 'politicadeprivacidade.html',
+  'infoline-privacidade.html',
 ];
 
 const failures = [];

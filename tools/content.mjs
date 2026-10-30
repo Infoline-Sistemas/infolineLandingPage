@@ -34,6 +34,7 @@ export const site = {
   sitemapLastmod: '2026-10-09',
   homeSitemapLastmod: '2026-10-26',
   pageSitemapLastmod: {
+    'infoline-privacidade.html': '2026-10-30',
     'erp-para-industria.html': '2026-10-22',
     'como-escolher-sistema-gestao-industria.html': '2026-10-26',
     'solucoes.html': '2026-10-26',

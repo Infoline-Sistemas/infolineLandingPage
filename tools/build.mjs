@@ -19,6 +19,7 @@ import { renderSolucoes } from './pages/solucoes.mjs';
 import { renderTrabalhe } from './pages/trabalhe.mjs';
 import { renderPrivacidade } from './pages/privacidade.mjs';
 import { renderPrivacidadeApps } from './pages/privacidade-apps.mjs';
+import { renderPrivacidadeInfolineMobile } from './pages/privacidade-infoline-mobile.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..'); // /home/claude/site
@@ -80,6 +81,7 @@ pages.push(['solucoes.html', renderSolucoes()]);
 pages.push(['trabalhe-conosco.html', renderTrabalhe()]);
 pages.push(['politica-de-privacidade.html', renderPrivacidade()]);
 pages.push(['politicadeprivacidade.html', renderPrivacidadeApps()]);
+pages.push(['infoline-privacidade.html', renderPrivacidadeInfolineMobile()]);
 
 let totalBytes = 0;
 for (const [name, page] of pages) {
