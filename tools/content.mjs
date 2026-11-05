@@ -17,6 +17,10 @@ export const site = {
   whatsapp: '5541988538135',
   whatsappDisplay: '(41) 98853-8135',
   email: 'comercial@infolinesystems.com.br',
+  social: {
+    facebook: 'https://www.facebook.com/IInfolineSistemas/',
+    instagram: 'https://www.instagram.com/infolinesystemsbr/',
+  },
   // Endereço preservado do site anterior e da política dos aplicativos.
   address: {
     streetAddress: 'Avenida República Argentina, 2403, cj. 86',

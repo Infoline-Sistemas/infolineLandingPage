@@ -21,7 +21,7 @@ export function orgSchema() {
       addressCountry: site.address.country,
     },
     areaServed: site.areaServed,
-    sameAs: [],
+    sameAs: Object.values(site.social),
   };
 }
 
