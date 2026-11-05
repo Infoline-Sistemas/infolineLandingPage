@@ -8,6 +8,7 @@ export function appPrivacyNav(current = '') {
     ['general', 'politicadeprivacidade.html', 'Política geral dos apps'],
     ['mobile', 'infoline-privacidade.html', 'Infoline'],
     ['fdv', 'infoline-fdv-privacidade.html', 'Infoline FDV'],
+    ['charlotte', 'charlotte-paes-privacidade.html', 'Charlotte Pães PV'],
   ];
   return `<nav class="privacy-app-nav" aria-label="Privacidade dos aplicativos">${pages.map(([key, path, label]) => `<a href="${B()}${path}"${current === key ? ' aria-current="page"' : ''}>${esc(label)}</a>`).join('')}</nav>`;
 }
@@ -189,6 +190,7 @@ export function footer() {
         <li><a href="${B()}politicadeprivacidade.html">Privacidade dos apps</a></li>
         <li><a href="${B()}infoline-privacidade.html">Privacidade do app Infoline</a></li>
         <li><a href="${B()}infoline-fdv-privacidade.html">Privacidade do Infoline FDV</a></li>
+        <li><a href="${B()}charlotte-paes-privacidade.html">Privacidade do Charlotte Pães PV</a></li>
         <li><button type="button" class="cookie-settings-link" data-cookie-settings>Preferências de cookies</button></li>
       </ul>
     </nav>
