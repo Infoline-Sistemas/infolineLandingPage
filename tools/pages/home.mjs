@@ -237,6 +237,26 @@ export function renderHome() {
   </div>
 </section>`;
 
+  // -- REFORMA TRIBUTÁRIA ---------------------------------------------------
+  const reforma = `
+<section class="section section--dark reform-section" id="reforma-tributaria">
+  <div class="container">
+    <div class="reform-intro reveal">
+      <p class="kicker">Reforma Tributária do Consumo</p>
+      <h2>O Infoline já acompanha a transição para 2027.</h2>
+      <p class="lede">O ERP já contempla parametrização, cálculo e informações de IBS e CBS em rotinas fiscais e documentos eletrônicos para operações suportadas. A configuração deve considerar as regras e o regime de cada empresa.</p>
+    </div>
+    <div class="reform-grid reveal">
+      <article><span>01 · CBS</span><h3>Cobrança a partir de 2027</h3><p>A CBS passa à etapa de cobrança e substitui PIS e Cofins.</p></article>
+      <article><span>02 · IBS</span><h3>Transição gradual</h3><p>O IBS continua em fase de transição em 2027 e 2028; a substituição gradual de ICMS e ISS ocorre de 2029 a 2032.</p></article>
+      <article><span>03 · IS e IPI</span><h3>Novas regras federais</h3><p>Começa o Imposto Seletivo. As alíquotas do IPI vão a zero para a maioria dos produtos, com exceções ligadas à Zona Franca de Manaus.</p></article>
+    </div>
+    <div class="reform-bottom reveal">
+      <a class="button button-primary" href="contabilidade.html" data-track="cta_click" data-label="home_reform_fiscal">Conheça a área Fiscal e Contábil</a>
+      <p>Resumo do cronograma oficial. A aplicação depende da operação e do regime tributário. <a href="https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda" target="_blank" rel="noopener noreferrer">Consulte a Receita Federal</a>.</p>
+    </div>
+  </div>
+</section>`;
   // -- QUEM SOMOS -----------------------------------------------------------
   const quemSomos = `
 <section class="section section--mist" id="quem-somos">
@@ -333,6 +353,7 @@ ${header({ variant: 'home' })}
   ${ecossistema}
   ${emAcao}
   ${diferenciais}
+  ${reforma}
   ${quemSomos}
   ${faq}
   ${contato}

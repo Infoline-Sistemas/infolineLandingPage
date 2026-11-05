@@ -841,6 +841,7 @@ export const homeFaq = [
   ['O Infoline atende operações industriais?', 'O Infoline possui uma área industrial completa: estrutura de produtos, roteiros, MRP II, carga de máquina, ordens e apontamentos de produção, além de WMS, custos e controladoria integrados.'],
   ['O Infoline é um sistema web?', 'Sim. O Infoline é um ERP online integrado. Em uma única plataforma web, conecta produção, estoque, compras, vendas, financeiro, fiscal e pessoas para centralizar informações e apoiar a gestão.'],
   ['Em quais regiões a Infoline atua?', 'A Infoline atende empresas em todo o Brasil. A sede fica em Curitiba, no Paraná.'],
+  ['O Infoline acompanha a Reforma Tributária?', 'Sim. O ERP já contempla parametrização, cálculo e informações de IBS e CBS em rotinas fiscais e documentos eletrônicos para operações suportadas. A configuração deve considerar a operação, o regime tributário e as regras vigentes.'],
   ['Como solicito uma demonstração?', 'Preencha o formulário desta página, chame a equipe no WhatsApp ou ligue para (41) 3014-0075. Um especialista apresenta as soluções disponíveis.'],
 ];
 
