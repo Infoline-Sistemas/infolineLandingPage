@@ -3,3 +3,9 @@
 .apps-policy h2 { font-size: 22px; margin: 32px 0 12px; }
 .apps-policy .body-text { margin: 0 0 16px; }
 .apps-policy a { color: var(--blue); text-decoration: underline; }
+.privacy-app-nav { display:flex; flex-wrap:wrap; gap:8px; margin:24px 0; }
+.privacy-app-nav a { padding:10px 16px; border:1px solid var(--line-2); border-radius:999px; color:var(--ink); background:var(--mist); font-size:14px; font-weight:600; text-decoration:none; }
+.privacy-app-nav a[aria-current="page"] { color:#fff; background:var(--blue); border-color:var(--blue); }
+.privacy-sections { display:flex; flex-wrap:wrap; gap:12px 24px; margin-top:20px; }
+.privacy-data-list { padding-left:24px; }
+.privacy-data-list li { margin-bottom:12px; }

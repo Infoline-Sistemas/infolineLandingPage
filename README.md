@@ -14,6 +14,8 @@ O envio de demonstrações mantém a chave pública Web3Forms já utilizada. For
 
 Veja [a integração e as pendências de ativação](docs/11-INTEGRACAO-GITHUB-PAGES.md).
 
+A política e o suporte do **Infoline FDV** ficam em `infoline-fdv-privacidade.html`, gerada por `tools/pages/privacidade-infoline-fdv.mjs`. As políticas dos aplicativos têm abas de navegação próprias e links no rodapé. Edite o template e execute o build antes de publicar.
+
 ## Regra mais importante
 
 > Não edite diretamente os arquivos `.html` da raiz para fazer mudanças permanentes.

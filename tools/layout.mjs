@@ -3,6 +3,15 @@ import { site, modules, moduleOrder } from './content.mjs';
 
 const B = () => base();
 
+export function appPrivacyNav(current = '') {
+  const pages = [
+    ['general', 'politicadeprivacidade.html', 'Política geral dos apps'],
+    ['mobile', 'infoline-privacidade.html', 'Infoline'],
+    ['fdv', 'infoline-fdv-privacidade.html', 'Infoline FDV'],
+  ];
+  return `<nav class="privacy-app-nav" aria-label="Privacidade dos aplicativos">${pages.map(([key, path, label]) => `<a href="${B()}${path}"${current === key ? ' aria-current="page"' : ''}>${esc(label)}</a>`).join('')}</nav>`;
+}
+
 const sectorPages = [
   { slug: 'erp-para-industria', label: 'Gestão Industrial', icon: 'i-pcpm' },
   { slug: 'erp-para-importadores', label: 'Gestão para Importadores', icon: 'i-compras' },
@@ -170,6 +179,7 @@ export function footer() {
         <li><a href="${B()}politica-de-privacidade.html">Privacidade do site</a></li>
         <li><a href="${B()}politicadeprivacidade.html">Privacidade dos apps</a></li>
         <li><a href="${B()}infoline-privacidade.html">Privacidade do app Infoline</a></li>
+        <li><a href="${B()}infoline-fdv-privacidade.html">Privacidade do Infoline FDV</a></li>
         <li><button type="button" class="cookie-settings-link" data-cookie-settings>Preferências de cookies</button></li>
       </ul>
     </nav>

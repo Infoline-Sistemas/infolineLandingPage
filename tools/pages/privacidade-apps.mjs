@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { head } from '../head.mjs';
-import { header, footer, breadcrumb } from '../layout.mjs';
+import { header, footer, breadcrumb, appPrivacyNav } from '../layout.mjs';
 
 export function renderPrivacidadeApps() {
   // Conteúdo original da main; apenas a estrutura e as classes são adaptadas.
@@ -22,6 +22,7 @@ export function renderPrivacidadeApps() {
 ${header({ variant: 'internal' })}
 ${breadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Privacidade dos apps' }])}
 <main id="conteudo" class="section">
+<div class="container apps-policy">${appPrivacyNav('general')}</div>
 ${policy}
 </main>
 ${footer()}`;

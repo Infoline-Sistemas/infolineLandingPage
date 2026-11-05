@@ -1,5 +1,5 @@
 import { head } from '../head.mjs';
-import { header, footer, breadcrumb } from '../layout.mjs';
+import { header, footer, breadcrumb, appPrivacyNav } from '../layout.mjs';
 
 export function renderPrivacidadeInfolineMobile() {
   const headHtml = head({
@@ -17,6 +17,7 @@ ${breadcrumb([{ label: 'Início', href: 'index.html' }, { label: 'Privacidade do
       <h1>Privacidade e suporte</h1>
       <p class="lede">Como o aplicativo Infoline para iOS e Android utiliza os dados necessários para acessar os painéis do ERP da sua empresa.</p>
       <p class="body-text">Última atualização: 30 de outubro de 2026.</p>
+      ${appPrivacyNav('mobile')}
       <nav aria-label="Nesta página"><a href="#privacidade">Política de privacidade</a> · <a href="#suporte">Falar com o suporte</a></nav>
     </div>
   </section>
