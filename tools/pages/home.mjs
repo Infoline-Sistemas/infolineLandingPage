@@ -252,7 +252,8 @@ export function renderHome() {
       <article><span>03 · IS e IPI</span><h3>Novas regras federais</h3><p>Começa o Imposto Seletivo. As alíquotas do IPI vão a zero para a maioria dos produtos, com exceções ligadas à Zona Franca de Manaus.</p></article>
     </div>
     <div class="reform-bottom reveal">
-      <a class="button button-primary" href="contabilidade.html" data-track="cta_click" data-label="home_reform_fiscal">Conheça a área Fiscal e Contábil</a>
+      <a class="button button-primary" href="reforma-tributaria.html" data-track="cta_click" data-label="home_reform_guide">Entenda a Reforma Tributária</a>
+      <a class="button button-outline" href="contabilidade.html" data-track="cta_click" data-label="home_reform_fiscal">Conheça a área Fiscal e Contábil</a>
       <p>Resumo do cronograma oficial. A aplicação depende da operação e do regime tributário. <a href="https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda" target="_blank" rel="noopener noreferrer">Consulte a Receita Federal</a>.</p>
     </div>
   </div>

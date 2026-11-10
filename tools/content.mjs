@@ -38,6 +38,7 @@ export const site = {
   sitemapLastmod: '2026-10-09',
   homeSitemapLastmod: '2026-10-26',
   pageSitemapLastmod: {
+    'reforma-tributaria.html': '2026-11-10',
     'infoline-fdv-privacidade.html': '2026-11-05',
     'infoline-privacidade.html': '2026-10-30',
     'erp-para-industria.html': '2026-10-22',

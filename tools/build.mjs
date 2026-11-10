@@ -13,6 +13,7 @@ import { site, modules, moduleOrder } from './content.mjs';
 import { renderHome } from './pages/home.mjs';
 import { renderIndustry } from './pages/industry.mjs';
 import { renderIndustryGuide } from './pages/industry-guide.mjs';
+import { renderTaxReform } from './pages/tax-reform.mjs';
 import { renderImporters, renderWholesale } from './pages/sectors.mjs';
 import { renderModule } from './pages/module.mjs';
 import { renderSolucoes } from './pages/solucoes.mjs';
@@ -68,6 +69,7 @@ pages.push(['index.html', renderHome()]);
 // Solução comercial para indústrias
 pages.push(['erp-para-industria.html', renderIndustry()]);
 pages.push(['como-escolher-sistema-gestao-industria.html', renderIndustryGuide()]);
+pages.push(['reforma-tributaria.html', renderTaxReform()]);
 pages.push(['erp-para-importadores.html', renderImporters()]);
 pages.push(['erp-para-atacado-distribuicao.html', renderWholesale()]);
 
@@ -86,8 +88,13 @@ pages.push(['infoline-privacidade.html', renderPrivacidadeInfolineMobile()]);
 pages.push(['infoline-fdv-privacidade.html', renderPrivacidadeInfolineFDV()]);
 
 let totalBytes = 0;
+const onlyIndex = process.argv.indexOf('--only');
+const only = onlyIndex < 0 ? null : new Set(process.argv.slice(onlyIndex + 1));
+if (only && (!only.size || [...only].some((name) => !pages.some(([pageName]) => pageName === name)))) {
+  throw new Error('Use --only com nomes de páginas geradas válidos.');
+}
 for (const [name, page] of pages) {
-  totalBytes += write(name, page);
+  if (!only || only.has(name)) totalBytes += write(name, page);
 }
 
 // ---------------------------------------------------------------------------
@@ -116,5 +123,5 @@ Sitemap: ${site.url}/sitemap.xml
 `;
 writeFileSync(join(ROOT, 'robots.txt'), robots, 'utf-8');
 
-console.log(`Build ok: ${pages.length} páginas, ${(totalBytes / 1024).toFixed(0)} KB de HTML.`);
-pages.forEach(([n]) => console.log(' -', n));
+console.log(`Build ok: ${only?.size ?? pages.length} de ${pages.length} páginas, ${(totalBytes / 1024).toFixed(0)} KB de HTML.`);
+(only ? pages.filter(([name]) => only.has(name)) : pages).forEach(([n]) => console.log(' -', n));
