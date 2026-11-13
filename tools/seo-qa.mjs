@@ -105,7 +105,7 @@ for (const page of pages) {
     if (matches.length !== 1 || matches[0].attrs.content !== value) pageFailures.push(`og:${property} ausente, duplicado ou incoerente`);
   }
   socialImageCount += meta(metas, 'property', 'og:image').length;
-  const requiredTwitter = { card: 'summary', title, description };
+  const requiredTwitter = { card: 'summary_large_image', title, description };
   for (const [name, value] of Object.entries(requiredTwitter)) {
     const matches = meta(metas, 'name', `twitter:${name}`);
     if (matches.length !== 1 || matches[0].attrs.content !== value) pageFailures.push(`twitter:${name} ausente, duplicado ou incoerente`);
@@ -206,4 +206,4 @@ if (failures.length) {
 }
 
 console.log(`QA de SEO ok: ${pages.length} páginas, metadata, canonicals, OG/Twitter, JSON-LD, FAQ, breadcrumbs, sitemap e robots validados.`);
-console.log(`Informativo: og:image/twitter:image presentes em ${socialImageCount} página(s); ausência mantida por não existir asset social oficial aprovado.`);
+console.log(`Informativo: og:image/twitter:image presentes em ${socialImageCount} página(s).`);

@@ -23,7 +23,7 @@ const ecosystemAreas = [
 ];
 
 export function renderHome() {
-  const title = 'ERP Online para Gestão Empresarial | Infoline V3.1';
+  const title = 'ERP Online para Indústria, Atacado e Importação | Infoline';
   const description = 'O Infoline V3.1 é um ERP online que integra produção, estoque, compras, vendas, financeiro, fiscal e pessoas. Conheça a plataforma e agende uma demonstração.';
 
   const headHtml = head({
@@ -253,7 +253,7 @@ export function renderHome() {
     </div>
     <div class="reform-bottom reveal">
       <a class="button button-primary" href="reforma-tributaria.html" data-track="cta_click" data-label="home_reform_guide">Entenda a Reforma Tributária</a>
-      <a class="button button-outline" href="contabilidade.html" data-track="cta_click" data-label="home_reform_fiscal">Conheça a área Fiscal e Contábil</a>
+      <a class="button button-ghost-dark" href="contabilidade.html" data-track="cta_click" data-label="home_reform_fiscal">Conheça a área Fiscal e Contábil</a>
       <p>Resumo do cronograma oficial. A aplicação depende da operação e do regime tributário. <a href="https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda" target="_blank" rel="noopener noreferrer">Consulte a Receita Federal</a>.</p>
     </div>
   </div>

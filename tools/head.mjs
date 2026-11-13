@@ -51,8 +51,9 @@ export function faqSchema(pairs) {
  * head({ title, description, path, ogImage, schemas, noindex })
  * path: caminho relativo ao root, ex: '' (home) ou 'financeiro.html'
  */
-export function head({ title, description, path = '', schemas = [], noindex = false, preload = [] }) {
+export function head({ title, description, path = '', ogImage = 'assets/img/og-infoline.png', schemas = [], noindex = false, preload = [] }) {
   const url = `${site.url}/${path}`;
+  const image = `${site.url}/${ogImage}`;
   return `<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://*.googletagmanager.com https://tagmanager.google.com https://*.google-analytics.com https://*.googleadservices.com https://*.doubleclick.net https://www.google.com https://connect.facebook.net">
@@ -71,7 +72,12 @@ export function head({ title, description, path = '', schemas = [], noindex = fa
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:url" content="${url}">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="${image}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Infoline: ERP online para conectar toda a operação">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="${image}">
   <meta name="twitter:title" content="${esc(title)}">
   <meta name="twitter:description" content="${esc(description)}">
   <title>${esc(title)}</title>
