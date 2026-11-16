@@ -67,6 +67,20 @@
       if (Object.keys(filtered).length) localStorage.setItem(STORAGE_KEY, JSON.stringify(filtered));
     } catch (e) { /* sem armazenamento de campanha */ }
   }
+  // Endereço enviado ao GA4: só o caminho e os parâmetros de campanha permitidos pelo consentimento
+  // (utm_* e gclid/gbraid/wbraid), para que cliques do Google Ads sejam atribuídos. Nada de formulário.
+  function campaignLocation() {
+    var base = location.origin + location.pathname;
+    try {
+      var url = new URL(location.href);
+      var found = {};
+      UTM_KEYS.concat(['gclid', 'gbraid', 'wbraid']).forEach(function (key) { var value = url.searchParams.get(key); if (value) found[key] = value; });
+      var allowed = allowedParams(found);
+      var query = Object.keys(allowed).filter(function (key) { return key.charAt(0) !== '_'; })
+        .map(function (key) { return encodeURIComponent(key) + '=' + encodeURIComponent(allowed[key]); }).join('&');
+      return query ? base + '?' + query : base;
+    } catch (e) { return base; }
+  }
   function injectScript(src) {
     var script = document.createElement('script');
     script.async = true;
@@ -89,7 +103,7 @@
       // A primeira medição do GA4 também ocorre se estatísticas forem liberadas depois.
       pageTracked = false;
       window.gtag('js', new Date());
-      window.gtag('config', cfg.ga4Id, { send_page_view: false, page_location: location.origin + location.pathname, allow_google_signals: c.marketing, allow_ad_personalization_signals: c.marketing });
+      window.gtag('config', cfg.ga4Id, { send_page_view: false, page_location: campaignLocation(), allow_google_signals: c.marketing, allow_ad_personalization_signals: c.marketing });
       injectScript('https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(cfg.ga4Id));
     }
     if (c.marketing && /^\d+$/.test(cfg.metaPixelId || '') && !loaded.meta) {
