@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 43">
+  <defs>
+    <mask id="letters">
+      <rect width="43" height="43" fill="#fff"/>
+      <circle cx="15.5" cy="10.8" r="2.5" fill="#000"/>
+      <rect x="14" y="15" width="3" height="16" rx="1.5" fill="#000"/>
+      <rect x="22" y="11" width="3" height="22" rx="1.5" fill="#000"/>
+      <rect x="22" y="30" width="12" height="3" rx="1.5" fill="#000"/>
+    </mask>
+  </defs>
+  <rect width="43" height="43" rx="13" fill="#0b3d91" mask="url(#letters)"/>
+</svg>
