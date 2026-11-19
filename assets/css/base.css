@@ -179,6 +179,14 @@ h3{ font-size:19px; line-height:1.25; font-weight:700; }
 .brand-text small{ display:block; margin-top:1px; font-family:var(--font-body); font-weight:600; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--slate); }
 .footer .brand-text{ color:#fff; }
 .footer .brand-text small{ color:var(--slate-2); }
+/* Nova marca (prévia): logotipo "Infoline" com o "o" em anel e o cometa */
+@font-face{ font-family:"Outfit"; src:url("../fonts/outfit-latin.woff2") format("woff2"); font-weight:100 900; font-display:swap; }
+.brand-lockup{ display:flex; flex-direction:column; gap:5px; line-height:1; }
+.brand-wordmark{ --logo-comet:#12a5de; --logo-bg:#fff; display:inline-flex; align-items:baseline; font-family:"Outfit", var(--font-display); font-weight:500; font-size:31px; letter-spacing:-.03em; line-height:1; color:var(--navy); }
+.brand-o{ width:.52em; height:.52em; margin:0 .01em; overflow:visible; flex:none; }
+.brand-lockup small{ font-family:var(--font-body); font-weight:600; font-size:8px; letter-spacing:.17em; text-transform:uppercase; color:var(--slate); white-space:nowrap; }
+.footer .brand-wordmark{ --logo-comet:#49d6ff; --logo-bg:var(--surface-dark); color:#fff; }
+.footer .brand-lockup small{ color:var(--slate-2); }
 
 .desktop-nav{ display:none; align-items:center; gap:2px; }
 .nav-item{ position:relative; }
